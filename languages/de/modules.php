@@ -38,7 +38,7 @@ $GLOBALS['TL_LANG']['MOD']['tl_lm_contests'] = array('Wettbewerbe', 'Ligen und T
 $GLOBALS['TL_LANG']['MOD']['tl_lm_teams'] = array('Mannschaften', 'Mannschaften und deren Spieler verwalten');
 $GLOBALS['TL_LANG']['MOD']['tl_lm_players'] = array('Spieler', 'Spieler hinzuf&uuml;gen und einem Verein zuordnen.');
 
-$GLOBALS['TL_LANG']['MOD']['league-manager-settings'] = 'Liga Manager - Einstellungen';
+$GLOBALS['TL_LANG']['MOD']['league-manager-settings'] = 'Liga Manager - Berichte';
 $GLOBALS['TL_LANG']['MOD']['tl_lm_event_masters'] = array('Ereignisvorlagen', 'Vorlagen f&uuml;r Eregenisse hinzuf&uuml;gen oder bearbeiten.');
 /**
  * Front end modules

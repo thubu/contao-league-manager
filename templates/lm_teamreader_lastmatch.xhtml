@@ -1,7 +1,7 @@
 <!-- indexer::stop --> 
 <!-- 
  
-	"Team reader - Last match" by Sören Schröder is part of the Contao League Manager extension Copyright (C) 2011 by Andreas Koob and based on the "Next Match" by Andreas Koob
+	"Team reader - Last match" by Soeren Schroeder is part of the Contao League Manager extension Copyright (C) 2011 by Andreas Koob and based on the "Next Match" by Andreas Koob
 	Visit http://contao-league-manager.com or http://contao-league-manager.de for more information.
 	
 --> 
@@ -13,34 +13,12 @@
 	<?php if($this->hasTeamid): ?>
 		<?php if ($this->match_found==1): ?>
 			<div class="match">
-				<table id="score_table">
-					<tr>
-						<td class="class="home team<?php if($this->away_own==1): ?> own<?php endif; ?>">
-							<span class="homelogo"><?php if ($this->show_logo==1 && $this->home_logo!=''): ?>{{image::<?php echo $this->home_logo; ?>?width=70&height=70}}<?php endif; ?>
-							<span class="name"><?php echo $this->home_name; ?></span><?php if($this->redirecthome!=''): ?></a><?php endif; ?></span>
-						</td>
-						<td class="score">
-							<span class="homescore<?php if($this->away_own==1): ?> own<?php endif; ?>"><?php echo $this->home_score; ?></span><span class="dots">:</span><span class="awayscore<?php if($this->away_own==1): ?> own<?php endif; ?>"><?php echo $this->away_score; ?></span>
-						</td>	
-						<td class="away team<?php if($this->away_own==1): ?> own<?php endif; ?>">
-							<span class="awaylogo"><?php if ($this->show_logo==1 && $this->away_logo!=''): ?>{{image::<?php echo $this->away_logo; ?>?width=70&height=70}}<?php endif; ?>
-							<span class="name"><?php echo $this->away_name; ?></span><?php if($this->redirectaway!=''): ?></a><?php endif; ?></span>
-						</td>
-					</tr>
-				</table>
+					<div class="home<?php if($this->home_own==1): ?> own<?php endif; ?>"><?php if($this->redirecthome!=''): ?><a href="<?php echo $this->redirecthome; ?>"><?php endif; ?><?php if ($this->show_logo==1 && $this->home_logo!=''): ?><img src="./<?php echo $this->home_logo; ?>" /><?php endif; ?><span class="name"><?php echo $this->home_name; ?></span><?php if($this->redirecthome!=''): ?></a><?php endif; ?></div>
+					<div class="versus">:</div>
+					<div class="away<?php if($this->away_own==1): ?> own<?php endif; ?>"><?php if($this->redirectaway!=''): ?><a href="<?php echo $this->redirectaway; ?>"><?php endif; ?><?php if ($this->show_logo==1 && $this->away_logo!=''): ?><img src="./<?php echo $this->away_logo; ?>" /><?php endif; ?><span class="name"><?php echo $this->away_name; ?></span><?php if($this->redirectaway!=''): ?></a><?php endif; ?></div>
+
 			</div>
-			<div class="info">
-				<p>
-					<span class="day"><?php echo $this->day; ?></span> den
-					<span class="date"> <?php echo $this->date; ?></span> um
-					<span class="time"> <?php echo $this->time; ?></span>
-				</p>
-			</div>
-			<div class="place">
-				<span class="location"><?php echo $this->location; ?></span> in
-				<span class="city"> <?php echo $this->city; ?></span>
-			</div>
-			<div class="reportlink"><a href="<?php echo $this->bericht; ?>">Spielbericht lesen</a></div>
+			<div class="info"><span class="date"><?php echo $this->date; ?></span><span class="time"><?php echo $this->time; ?></span></div>
 			<?php if($this->redirectmatch!=''): ?><div class="matchinfo"><a href="<?php echo $this->redirectmatch; ?>"><?php echo($GLOBALS['TL_LANG']['league-manager']['matchreader_nextmatch']['matchinfos']); ?></a></div><?php endif; ?>
 		<?php endif; ?>
 	<?php endif; ?>

@@ -17,21 +17,21 @@
  * @author     Andreas Koob
  * @package    Controller
  */
-class lm_contestreader_hometable extends ContentElement
+class lm_contestreader_awaytable extends ContentElement
 {
 
 	/**
 	 * Template
 	 * @var string
 	 */
-	protected $strTemplate = 'lm_contestreader_hometable';
+	protected $strTemplate = 'lm_contestreader_awaytable';
 
 
 	public function generate()
 	{
 		if (TL_MODE == 'BE')
 		{
-			$return = "Contest reader - hometable<br />";
+			$return = "Contest reader - awaytable<br />";
 			if($this->lm_usefixedcontest=="1"){
 				$objContest =$this->Database->prepare("SELECT * FROM tl_lm_contests WHERE id=?")->execute($this->lm_contest);
 				$return.="Fixed contest: " . $objContest->name;
@@ -173,76 +173,76 @@ class lm_contestreader_hometable extends ContentElement
 						$score_away=$objMatches->score_away;
 
 						//Increase match counter per team
-						$arrTeams[$objMatches->team_home]['matches']+=1;
-						/**$arrTeams[$objMatches->team_away]['matches']+=1;*/
+						/**$arrTeams[$objMatches->team_home]['matches']+=1;*/
+						$arrTeams[$objMatches->team_away]['matches']+=1;
 
 						//update result+,result-
-						$arrTeams[$objMatches->team_home]['resplus']+=$score_home;
-						$arrTeams[$objMatches->team_home]['resminus']+=$score_away;
-						/**$arrTeams[$objMatches->team_away]['resplus']+=$score_away;*/
-						/**$arrTeams[$objMatches->team_away]['resminus']+=$score_home;*/
+						/**$arrTeams[$objMatches->team_home]['resplus']+=$score_home;*/
+						/**$arrTeams[$objMatches->team_home]['resminus']+=$score_away;*/
+						$arrTeams[$objMatches->team_away]['resplus']+=$score_away;
+						$arrTeams[$objMatches->team_away]['resminus']+=$score_home;
 
 						//update Result diff
-						$arrTeams[$objMatches->team_home]['resdiff']=$arrTeams[$objMatches->team_home]['resplus']-$arrTeams[$objMatches->team_home]['resminus'];
-						/**$arrTeams[$objMatches->team_away]['resdiff']=$arrTeams[$objMatches->team_away]['resplus']-$arrTeams[$objMatches->team_away]['resminus'];*/
+						/**$arrTeams[$objMatches->team_home]['resdiff']=$arrTeams[$objMatches->team_home]['resplus']-$arrTeams[$objMatches->team_home]['resminus'];*/
+						$arrTeams[$objMatches->team_away]['resdiff']=$arrTeams[$objMatches->team_away]['resplus']-$arrTeams[$objMatches->team_away]['resminus'];
 
 						//Update points
 						if($score_home>$score_away){//home wins
 
 							//Update win,draw,lose
-							$arrTeams[$objMatches->team_home]['win']+=1;
-							/**$arrTeams[$objMatches->team_away]['lose']+=1;*/
+							/**$arrTeams[$objMatches->team_home]['win']+=1;*/
+							$arrTeams[$objMatches->team_away]['lose']+=1;
 
 							if($objMatches->different_points==1){//Has this match a different point scheme than the contest?
-								$arrTeams[$objMatches->team_home]['pointsplus']+=$objMatches->points_home;
-								$arrTeams[$objMatches->team_home]['pointsminus']-=$objMatches->points_away;
-							/**	$arrTeams[$objMatches->team_away]['pointsplus']+=$objMatches->points_away;*/
-							/**	$arrTeams[$objMatches->team_away]['pointsminus']-=$objMatches->points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsplus']+=$objMatches->points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsminus']-=$objMatches->points_away;*/
+								$arrTeams[$objMatches->team_away]['pointsplus']+=$objMatches->points_away;
+								$arrTeams[$objMatches->team_away]['pointsminus']-=$objMatches->points_home;
 							}
 							else{
-								$arrTeams[$objMatches->team_home]['pointsplus']+=$objContest->home_wins_points_home;
-								$arrTeams[$objMatches->team_home]['pointsminus']-=$objContest->home_wins_points_away;
-							/**	$arrTeams[$objMatches->team_away]['pointsplus']+=$objContest->home_wins_points_away;*/
-							/**	$arrTeams[$objMatches->team_away]['pointsminus']-=$objContest->home_wins_points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsplus']+=$objContest->home_wins_points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsminus']-=$objContest->home_wins_points_away;*/
+								$arrTeams[$objMatches->team_away]['pointsplus']+=$objContest->home_wins_points_away;
+								$arrTeams[$objMatches->team_away]['pointsminus']-=$objContest->home_wins_points_home;
 							}
 						}
 						elseif($score_home<$score_away){//away wins
-							$arrTeams[$objMatches->team_home]['lose']+=1;
-							/**$arrTeams[$objMatches->team_away]['win']+=1;*/
+							/**$arrTeams[$objMatches->team_home]['lose']+=1;*/
+							$arrTeams[$objMatches->team_away]['win']+=1;
 							if($objMatches->different_points==1){
-								$arrTeams[$objMatches->team_home]['pointsplus']+=$objMatches->points_home;
-								$arrTeams[$objMatches->team_home]['pointsminus']-=$objMatches->points_away;
-							/**	$arrTeams[$objMatches->team_away]['pointsplus']+=$objMatches->points_away;*/
-							/**	$arrTeams[$objMatches->team_away]['pointsminus']-=$objMatches->points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsplus']+=$objMatches->points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsminus']-=$objMatches->points_away;*/
+								$arrTeams[$objMatches->team_away]['pointsplus']+=$objMatches->points_away;
+								$arrTeams[$objMatches->team_away]['pointsminus']-=$objMatches->points_home;
 							}
 							else{
-								$arrTeams[$objMatches->team_home]['pointsplus']+=$objContest->away_wins_points_home;
-								$arrTeams[$objMatches->team_home]['pointsminus']-=$objContest->away_wins_points_away;
-							/**	$arrTeams[$objMatches->team_away]['pointsplus']+=$objContest->away_wins_points_away;*/
-							/**	$arrTeams[$objMatches->team_away]['pointsminus']-=$objContest->away_wins_points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsplus']+=$objContest->away_wins_points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsminus']-=$objContest->away_wins_points_away;*/
+								$arrTeams[$objMatches->team_away]['pointsplus']+=$objContest->away_wins_points_away;
+								$arrTeams[$objMatches->team_away]['pointsminus']-=$objContest->away_wins_points_home;
 							}
 						}
 
 						else{//Draw
-							$arrTeams[$objMatches->team_home]['draw']+=1;
-							/**$arrTeams[$objMatches->team_away]['draw']+=1;*/
+							/**$arrTeams[$objMatches->team_home]['draw']+=1;*/
+							$arrTeams[$objMatches->team_away]['draw']+=1;
 							if($objMatches->different_points==1){
-								$arrTeams[$objMatches->team_home]['pointsplus']+=$objMatches->points_home;
-								$arrTeams[$objMatches->team_home]['pointsminus']-=$objMatches->points_away;
-							/**	$arrTeams[$objMatches->team_away]['pointsplus']+=$objMatches->points_away;*/
-							/**	$arrTeams[$objMatches->team_away]['pointsminus']-=$objMatches->points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsplus']+=$objMatches->points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsminus']-=$objMatches->points_away;*/
+								$arrTeams[$objMatches->team_away]['pointsplus']+=$objMatches->points_away;
+								$arrTeams[$objMatches->team_away]['pointsminus']-=$objMatches->points_home;
 							}
 							else{
-								$arrTeams[$objMatches->team_home]['pointsplus']+=$objContest->draw_points_home;
-								$arrTeams[$objMatches->team_home]['pointsminus']-=$objContest->draw_points_away;
-							/**	$arrTeams[$objMatches->team_away]['pointsplus']+=$objContest->draw_points_away;*/
-							/**	$arrTeams[$objMatches->team_away]['pointsminus']-=$objContest->draw_points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsplus']+=$objContest->draw_points_home;*/
+							/**	$arrTeams[$objMatches->team_home]['pointsminus']-=$objContest->draw_points_away;*/
+								$arrTeams[$objMatches->team_away]['pointsplus']+=$objContest->draw_points_away;
+								$arrTeams[$objMatches->team_away]['pointsminus']-=$objContest->draw_points_home;
 							}
 						}
 
 						//Update results differences
-						$arrTeams[$objMatches->team_home]['pointsdiff']=$arrTeams[$objMatches->team_home]['pointsplus']+$arrTeams[$objMatches->team_home]['pointsminus'];
-						/**$arrTeams[$objMatches->team_away]['pointsdiff']=$arrTeams[$objMatches->team_away]['pointsplus']+$arrTeams[$objMatches->team_away]['pointsminus'];*/
+						/**$arrTeams[$objMatches->team_home]['pointsdiff']=$arrTeams[$objMatches->team_home]['pointsplus']+$arrTeams[$objMatches->team_home]['pointsminus'];*/
+						$arrTeams[$objMatches->team_away]['pointsdiff']=$arrTeams[$objMatches->team_away]['pointsplus']+$arrTeams[$objMatches->team_away]['pointsminus'];
 					}//end of if($objMatches->score_home || $objMatches->score_away)
 				}//end of while($objMatches->next())
 			}//end of while($objRounds->next())

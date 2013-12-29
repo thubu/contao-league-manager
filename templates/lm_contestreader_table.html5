@@ -11,7 +11,7 @@
 		<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
 	<?php endif; ?>
 	<?php if($this->hasContestid): ?>
-		<form action="<?php echo($this->formurl); ?>" method="get">
+		<!-- <form action="<?php echo($this->formurl); ?>" method="get">
 			
 			<span class="select_round"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_from']); ?>
 			
@@ -36,7 +36,7 @@
 			<input type="submit" value="<?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_submit']); ?>">
 			<input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">
 			</span>
-		</form>
+		</form> -->
 		
 		<table>
 			<thead>

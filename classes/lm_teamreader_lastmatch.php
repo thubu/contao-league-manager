@@ -31,7 +31,7 @@ class lm_teamreader_lastmatch extends ContentElement
 	{
 		if (TL_MODE == 'BE')
 		{
-			$return="Next match per team<br />";
+			$return="Last match per team<br />";
 			if($this->lm_usefixedteam=="1"){
 				$objTeam =$this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($this->lm_team);
 				$return.="Fixed team: " . $objTeam->name;

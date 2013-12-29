@@ -40,18 +40,15 @@ $GLOBALS['TL_LANG']['CTE']['lm_contestreader_rounds']   = array('Wettbewerbslese
 $GLOBALS['TL_LANG']['CTE']['lm_contestreader_matches']   = array('Wettbewerbsleser - Matches', 'Listet alle Matches eines Wettbewerbs auf.');
 $GLOBALS['TL_LANG']['CTE']['lm_contestreader_table']   = array('Wettbewerbsleser - Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
 $GLOBALS['TL_LANG']['CTE']['lm_contestreader_hometable']   = array('Wettbewerbsleser - Heim-Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_awaytable']   = array('Wettbewerbsleser - Ausw&auml;rts-Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
 $GLOBALS['TL_LANG']['CTE']['lm_contestreader_crosstable']   = array('Wettbewerbsleser - Kreuztabelle', 'Generiert eine Kreuztabelle f&uuml;r einen Wettbewerb.');
-
 $GLOBALS['TL_LANG']['CTE']['lm_teamreader_lastmatch']   = array('Mannschaftsleser - Letztes Match', 'Zeigt das letzte Match einer Mannschaft an.');
-
 $GLOBALS['TL_LANG']['CTE']['lm_teamreader_nextmatch']   = array('Mannschaftsleser - N&auml;chstes Match', 'Zeigt das n&auml;chste Match einer Mannschaft an.');
 $GLOBALS['TL_LANG']['CTE']['lm_teamreader_basic']   = array('Mannschaftsleser - Grunddaten', 'Zeigt Grundinformationen &uuml;ber eine Mannschaft an.');
 $GLOBALS['TL_LANG']['CTE']['lm_teamreader_matches']   = array('Mannschaftsleser - Matches', 'Zeigt die Matches einer Mannschaft an.');
-
 $GLOBALS['TL_LANG']['CTE']['lm_matchreader_events']   = array('League Manager - Matchleser - Ereignisse', 'Listet alle Ereignisse eines Matches auf.');
 $GLOBALS['TL_LANG']['CTE']['lm_matchreader_basic']   = array('League Manager - Matchleser - Grundinformationen', 'Zeigt die Grundinformationen eines Matches an.');
 $GLOBALS['TL_LANG']['CTE']['lm_matchreader_reports']   = array('League Manager - Matchleser - Berichte', 'Zeigt die Berichte eines Matches an.');
-
 $GLOBALS['TL_LANG']['CTE']['lm_playerreader_basic']   = array('League Manager - Spielerleser - Grundinformationen', 'Zeigt die Grundinformationen eines Spielers an.');
 
 
@@ -109,10 +106,8 @@ $GLOBALS['TL_LANG']['league-manager']['matchreader_basic']['region']   = 'Region
 $GLOBALS['TL_LANG']['league-manager']['matchreader_basic']['website']   = 'Webseite';
 
 $GLOBALS['TL_LANG']['league-manager']['matchreader_lastmatch']['matchinfos']   = 'Weitere Informationen zum Spiel';
-
 $GLOBALS['TL_LANG']['league-manager']['matchreader_nextmatch']['matchinfos']   = 'Weitere Informationen zum Spiel';
 
 $GLOBALS['TL_LANG']['league-manager']['misc']['nosortstring']   = '(Kein Sortierbegriff)';
 $GLOBALS['TL_LANG']['league-manager']['misc']['with_div']   = 'Mit DIV Elementen';
 $GLOBALS['TL_LANG']['league-manager']['misc']['with_table']   = 'Als Tabelle';
-?>
