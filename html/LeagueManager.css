@@ -1,0 +1,69 @@
+/* Style sheet CLM_LeagueManager */
+.ce_lm_contestreader_teams table{width:90%;margin-top:5px;margin-left:5px;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_teams th{height:35px;margin-right:auto;margin-left:auto;text-align:center;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_teams td{text-align:center;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_teams .contestname{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_teams .startdate{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_teams .enddate{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_teams .logo{}
+.ce_lm_contestreader_teams .teamname{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_teams .shortname{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_teams .teamlogo{margin-top:5px;margin-left:25px;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_rounds .contestname{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_rounds .roundname{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_rounds .roundmode{margin-top:5px;margin-right:0;margin-left:25px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches table{width:90%;margin-top:5px;margin-left:5px;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_matches th{height:25px;margin-right:auto;margin-left:auto;text-align:center;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_matches td{margin-right:2px;margin-left:2px;text-align:center;border-bottom:1px dotted #999999;border-collapse:separate;}
+.ce_lm_contestreader_matches .roundname{margin-right:10px;margin-left:2px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .finalized{margin-right:10px;margin-left:2px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .startdate{margin-right:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .starttime{margin-right:10px;margin-left:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .hometeam{margin-right:10px;margin-left:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .scorehome{margin-right:10px;margin-left:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .awayteam{margin-right:10px;margin-left:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .scoreaway{margin-right:10px;margin-left:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_matches .versus{margin-right:10px;margin-left:10px;text-align:center;font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table table{width:90%;margin-top:5px;margin-left:5px;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_table th{margin-top:5px;margin-left:5px;border:1px solid #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_table td{text-align:center;border-top:1px dotted #fc7c17;border-bottom:1px dotted #fc7c17;border-collapse:separate;}
+.ce_lm_contestreader_table .Logo{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Team{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Matches{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Win{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Draw{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Lose{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Resplus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Resminus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Resdiff{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Pointsplus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Pointsminus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Pointsdiff{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Pointstotal{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .Pointspenalty{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;text-align:center;font-family:Tahoma;font-weight:bold;font-size:12px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table own{margin-top:5px;margin-left:5px;border:1px solid #fc7c17;border-collapse:separate;font-family:Tahoma;font-weight:bold;font-size:14px;color:#ff0000;}
+.ce_lm_contestreader_table .teamlogo{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;}
+.ce_lm_contestreader_table .teamname{margin-top:5px;margin-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .matches{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .matcheswin{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .matchesdraw{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .matcheslose{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .resplus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .resminus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .resdiff{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .pointsplus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .pointsminus{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .pointsdiff{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_contestreader_table .pointstotal{margin-right:5px;margin-left:5px;padding-right:5px;padding-left:5px;font-family:Tahoma;font-weight:normal;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_teamreader_basic .name{font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_teamreader_basic .shortname{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_teamreader_basic .website{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_teamreader_basic a:link,a:visited,a:focus,a:hover,a:active{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_teamreader_basic .contests{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_teamreader_basic .contests ul,.contests li{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;list-style-type:disc;}
+.ce_lm_playerreader_basic .name{font-family:Tahoma;font-weight:bold;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_playerreader_basic .nickname{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_playerreader_basic .birthday{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_playerreader_basic .website{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_playerreader_basic .position{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
+.ce_lm_playerreader_basic .addinfo{font-family:Tahoma;font-size:14px;color:#999999;line-height:1.4em;}
