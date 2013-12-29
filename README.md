@@ -1,7 +1,7 @@
 contao-league-manager
 =====================
 
-Contao League Manager
+Contao League Manager @Copyright by Bandyt
 
 Eine Turnier- und Ligenverwaltung für das CMS Contao.
 
