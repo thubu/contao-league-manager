@@ -1,5 +1,5 @@
 <?php
-
+/**
  * PHP version 5
  * @copyright  2010 Andreas Koob
  * @author     Andreas Koob
