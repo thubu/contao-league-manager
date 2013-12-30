@@ -61,8 +61,8 @@ CREATE TABLE `tl_lm_contest_penalties` (
 -- 
 
 CREATE TABLE `tl_lm_team_to_contest` (
-	`team` int(10) unsigned NOT NULL default '0',
-	`contest` int(10) unsigned NOT NULL default '0'
+        `team` int(10) unsigned NOT NULL default '0',
+        `contest` int(10) unsigned NOT NULL default '0'
 ) ENGINE=MyISAM default CHARSET=utf8;
 
 
@@ -364,3 +364,4 @@ CREATE TABLE `tl_content` (
   `lm_link_match_new_window` char(1) NOT NULL default '',
   `lm_link_contest_new_window` char(1) NOT NULL default ''
 ) ENGINE=MyISAM default CHARSET=utf8;
+Status API Training Shop Blog About © 2013 GitHub, Inc. Terms Privacy Security Contact 

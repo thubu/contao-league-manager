@@ -184,7 +184,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_tablefields'] = array
 	'exclude'                 => false,
 	'inputType'               => 'checkboxWizard',
 	'eval'                    => array('mandatory'=>true,'multiple'=>true),
-	'options'				  => array('logo','name','matches','w','d','l','rp','rm','rd','pp','pm','pd','pt','pen'),
+	'options'				  => array('place','logo','name','matches','w','d','l','rp','rm','rd','pp','pm','pd','pt','pen'),
 	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['lm_tablefields']['reference']
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_usefixedteam'] = array

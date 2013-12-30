@@ -36,6 +36,7 @@ $GLOBALS['TL_LANG']['CTE']['lm_playerreader_basic']   = array('League Manager - 
 /**
  * Miscellaneous
  */
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Place']   = 'Platz';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Logo']   = 'Logo';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Team']   = 'Mannschaft';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Matches']  = 'Matches';
