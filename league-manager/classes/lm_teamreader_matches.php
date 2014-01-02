@@ -26,7 +26,6 @@ class lm_teamreader_matches extends ContentElement
 	 */
 	protected $strTemplate = 'lm_teamreader_matches';
 
-
 	public function generate()
 	{
 		if (TL_MODE == 'BE')
@@ -133,6 +132,20 @@ class lm_teamreader_matches extends ContentElement
 						else{
 							$awayscore='-';
 						}
+
+						if($objMatches->halftimescore_home!=""){
+							$homescorehalftime=$objMatches->halftimescore_home;
+						}
+						else{
+							$homescorehalftime='-';
+						}
+						if($objMatches->halftimescore_away!=""){
+							$awayscorehalftime=$objMatches->halftimescore_away;
+						}
+						else{
+							$awayscorehalftime='-';
+						}
+
 						if(($this->lm_useredirectmatch==1)&&($this->lm_redirectmatch!=0))
 						{
 							$redirect=$this->generateFrontendUrl($objTargetPage->row(),'/lm_match/' . $objMatches->id);
@@ -141,6 +154,8 @@ class lm_teamreader_matches extends ContentElement
 						{
 							$redirect='';
 						}
+
+
 						$arrMatches[$i][]=array(
 							'matchid'=>$objMatches->id,
 							'startdate'=>$objMatches->startdate,
@@ -150,12 +165,14 @@ class lm_teamreader_matches extends ContentElement
 							'homeshort'=>$home->shortname,
 							'homelogo'=>$home->logo,
 							'homescore'=>$homescore,
+							'homescorehalftime'=>$homescorehalftime,
 							'home_own'=>$home->ownteam,
 							'away'=>$away->name,
 							'awayid'=>$away->id,
 							'awayshort'=>$away->shortname,
 							'awaylogo'=>$away->logo,
 							'awayscore'=>$awayscore,
+							'awayscorehalftime'=>$awayscorehalftime,
 							'away_own'=>$away->ownteam,
 							'resultconfirmed'=>$objMatches->result_confirmed,
 							'different_points'=>$objMatches->different_points,
@@ -186,6 +203,19 @@ class lm_teamreader_matches extends ContentElement
 						$awayscore='-';
 					}
 
+					if($objMatches->halftimescore_home!=""){
+						$homescorehalftime=$objMatches->halftimescore_home;
+					}
+					else{
+						$homescorehalftime='-';
+					}
+					if($objMatches->halftimescore_away!=""){
+						$awayscorehalftime=$objMatches->halftimescore_away;
+					}
+					else{
+						$awayscorehalftime='-';
+					}
+
 					$arrMatches[$i][]=array(
 						'matchid'=>$objMatches->id,
 						'startdate'=>$objMatches->startdate,
@@ -195,12 +225,14 @@ class lm_teamreader_matches extends ContentElement
 						'homeshort'=>$home->shortname,
 						'homelogo'=>$home->logo,
 						'homescore'=>$homescore,
+						'homescorehalftime'=>$homescorehalftime,
 						'home_own'=>$home->ownteam,
 						'away'=>$away->name,
 						'awayid'=>$away->id,
 						'awayshort'=>$away->shortname,
 						'awaylogo'=>$away->logo,
 						'awayscore'=>$awayscore,
+						'awayscorehalftime'=>$awayscorehalftime,
 						'away_own'=>$away->ownteam,
 						'resultconfirmed'=>$objMatches->result_confirmed,
 						'different_points'=>$objMatches->different_points,
@@ -214,6 +246,7 @@ class lm_teamreader_matches extends ContentElement
 			$this->Template->rounds=$arrRounds;
 			$this->Template->matches=$arrMatches;
 			$this->Template->useredirectmatch=$this->lm_useredirectmatch;
+			$this->Template->show_logo=$this->lm_showlogo;
 
 			$this->Template->hasTeamid=$teamid;
 		}//if($teamid)

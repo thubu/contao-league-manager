@@ -14,7 +14,7 @@
 		<?php if ($this->team_found==1): ?>
 			<?php if($this->logo!=''): ?>
 				<div class="logo">
-					<img src="<?php echo($this->logo); ?>" />
+					<img src="<?php echo($this->lm_showlogo); ?>" />
 				</div>
 			<?php endif; ?>
 			<div class="team"<?php if($this->se_friendly==1): ?> itemscope itemtype="http://data-vocabulary.org/Organization"<?php endif; ?>

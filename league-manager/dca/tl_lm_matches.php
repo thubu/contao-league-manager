@@ -42,7 +42,7 @@ $GLOBALS['TL_DCA']['tl_lm_matches'] = array
 		),
 		'label' => array
 		(
-			'fields'                  => array('team_home','team_away','score_home','score_away'),
+			'fields'                  => array('team_home','team_away','score_home','score_away','halftimescore_home','halftimescore_away'),
 			'format'                  => '%s vs. %s  <strong>(%s : %s)</strong>',
 			'group_callback'		  => array('tl_lm_matches','getGrouplabel')
 		),
@@ -102,7 +102,7 @@ $GLOBALS['TL_DCA']['tl_lm_matches'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('different_points','venue'),
-		'default'                     => '{assignment},contest,pid,group;{datetime},startdate,starttime,enddate,endtime;{add_information},picture,website;{home},team_home,score_home;{away},team_away,score_away;{matchlocation},venue;{points},different_points;{confirmed},result_confirmed'
+		'default'                     => '{assignment},contest,pid,group;{datetime},startdate,starttime,enddate,endtime;{add_information},picture,website;{home},team_home,score_home,halftimescore_home;{away},team_away,score_away,halftimescore_away;{matchlocation},venue;{points},different_points;{confirmed},result_confirmed'
 	),
 
 	// Subpalettes
@@ -168,6 +168,14 @@ $GLOBALS['TL_DCA']['tl_lm_matches'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
+		'halftimescore_home' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_matches']['halftimescore_home'],
+			'exclude'                 => false,
+			'filter'				  => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
 		'team_away' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_matches']['team_away'],
@@ -180,6 +188,14 @@ $GLOBALS['TL_DCA']['tl_lm_matches'] = array
 		'score_away' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_matches']['score_away'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'filter'				  => true,
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'halftimescore_away' => array
+				(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_matches']['halftimescore_away'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
 			'filter'				  => true,
@@ -330,7 +346,9 @@ class tl_lm_matches extends Backend
 		$return = $this->Database->prepare("SELECT name FROM tl_lm_teams WHERE id=? ORDER BY name ASC")->execute($arrRow['team_home']);
 		$label .= $return->name . " vs. ";
 		$return = $this->Database->prepare("SELECT name FROM tl_lm_teams WHERE id=? ORDER BY name ASC")->execute($arrRow['team_away']);
-		$label = $label . $return->name . " <strong>(" . $arrRow['score_home'] . ":" . $arrRow['score_away'] . ")</strong>";
+		$label = $label . $return->name . " <strong>" . $arrRow['score_home'] . ":" . $arrRow['score_away'] . "</strong>";
+		$label .=  " / ";
+		$label = $label . " <strong>(" . $arrRow['halftimescore_home'] . ":" . $arrRow['halftimescore_away'] . ")</strong>";
 		if($arrRow['result_confirmed']=="1"){$label=$label . " *";}
 		if($arrRow['different_points']=="1"){$label=$label . " <strong>P</strong>";}
 		return $label;

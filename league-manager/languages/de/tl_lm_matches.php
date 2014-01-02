@@ -21,16 +21,20 @@ $GLOBALS['TL_LANG']['tl_lm_matches']['endtime'] = array('Endzeit', 'Uhrzeit des 
 
 $GLOBALS['TL_LANG']['tl_lm_matches']['home'] = 'Heimmannschaft';
 $GLOBALS['TL_LANG']['tl_lm_matches']['team_home'] = array('Heimmannschaft', 'Name der Heimmannschaft');
-$GLOBALS['TL_LANG']['tl_lm_matches']['score_home'] = array('Ergebnis Heimmannschaft', 'Punkte der Heimmannschaft');
+$GLOBALS['TL_LANG']['tl_lm_matches']['score_home'] = array('Endergebnis Heimmannschaft', 'Endergebnis Heimmannschaft');
+$GLOBALS['TL_LANG']['tl_lm_matches']['halftimescore_home'] = array('Halbzeitergebnis Heimmannschaft', 'Tore 1.Halbzeit Heimmannschaft');
+
 
 $GLOBALS['TL_LANG']['tl_lm_matches']['away'] = 'Ausw&auml;rtsmannschaft';
 $GLOBALS['TL_LANG']['tl_lm_matches']['team_away'] = array('Ausw&auml;rtsmannschaft', 'Name der Heimmannschaft');
-$GLOBALS['TL_LANG']['tl_lm_matches']['score_away'] = array('Ergebnis Ausw&auml;rtsmannschaft', 'Punkte der Ausw&auml;rtsmannschaft');
+$GLOBALS['TL_LANG']['tl_lm_matches']['score_away'] = array('Endergebnis Ausw&auml;rtsmannschaft', 'Endergebnis Ausw&auml;rtsmannschaft');
+$GLOBALS['TL_LANG']['tl_lm_matches']['halftimescore_away'] = array('Halbzeitergebnis Ausw&auml;rtsmannschaft', 'Tore 1.Halbzeit Ausw&auml;rtsmannschaft');
 
-$GLOBALS['TL_LANG']['tl_lm_matches']['points'] = 'Punkte';
-$GLOBALS['TL_LANG']['tl_lm_matches']['different_points'] = array('Abweichende Punktevergabe', 'Die Punkte f&uuml;r die Mannschaften weichen von den Einstellungen im Wettkampf ab.');
-$GLOBALS['TL_LANG']['tl_lm_matches']['points_home'] = array('Punkte Heimmannschaft', 'Punkte f&uuml;r die Heimmannschaft.');
-$GLOBALS['TL_LANG']['tl_lm_matches']['points_away'] = array('Punkte Gastmannschaft', 'Punkte f&uuml;r die Gastmannschaft.');
+
+$GLOBALS['TL_LANG']['tl_lm_matches']['points'] = 'Straf-Punkte';
+$GLOBALS['TL_LANG']['tl_lm_matches']['different_points'] = array('Straf-Punktevergabe', 'Die Punkte f&uuml;r die Mannschaften weichen von den Grundeinstellungen Wettkampf ab. Sie sind nur f&uuml;r dieses Spiel zu erfassen und g&uuml;ltig !');
+$GLOBALS['TL_LANG']['tl_lm_matches']['points_home'] = array('Straf-Punkte Heimmannschaft', 'Straf-Punkte f&uuml;r die Heimmannschaft.');
+$GLOBALS['TL_LANG']['tl_lm_matches']['points_away'] = array('Straf-Punkte Gastmannschaft', 'Straf-Punkte f&uuml;r die Gastmannschaft.');
 
 $GLOBALS['TL_LANG']['tl_lm_matches']['confirmed'] = 'Ergebnis best&auml;tigt';
 $GLOBALS['TL_LANG']['tl_lm_matches']['result_confirmed'] = array('Ergebnis best&auml;tigt', 'Ausw&auml;hlen, wenn das Ergebnis offiziell best&auml;tigt wurde');

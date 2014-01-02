@@ -3,7 +3,7 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2013 Leo Feyer
+ * Copyright (c) 2005-2014 Leo Feyer
  *
  * @package League-manager
  * @link    https://contao.org
@@ -17,10 +17,10 @@
 ClassLoader::addClasses(array
 (
 	// Classes
+	'lm_contestreader_awaytable'  => 'system/modules/league-manager/classes/lm_contestreader_awaytable.php',
 	'lm_contestreader_basic'      => 'system/modules/league-manager/classes/lm_contestreader_basic.php',
 	'lm_contestreader_crosstable' => 'system/modules/league-manager/classes/lm_contestreader_crosstable.php',
 	'lm_contestreader_hometable'  => 'system/modules/league-manager/classes/lm_contestreader_hometable.php',
-	'lm_contestreader_awaytable'  => 'system/modules/league-manager/classes/lm_contestreader_awaytable.php',
 	'lm_contestreader_matches'    => 'system/modules/league-manager/classes/lm_contestreader_matches.php',
 	'lm_contestreader_rounds'     => 'system/modules/league-manager/classes/lm_contestreader_rounds.php',
 	'lm_contestreader_table'      => 'system/modules/league-manager/classes/lm_contestreader_table.php',
@@ -42,10 +42,10 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
+	'lm_contestreader_awaytable'     => 'system/modules/league-manager/templates',
 	'lm_contestreader_basic'         => 'system/modules/league-manager/templates',
 	'lm_contestreader_crosstable'    => 'system/modules/league-manager/templates',
 	'lm_contestreader_hometable'     => 'system/modules/league-manager/templates',
-	'lm_contestreader_awaytable'     => 'system/modules/league-manager/templates',
 	'lm_contestreader_matches'       => 'system/modules/league-manager/templates',
 	'lm_contestreader_matches_table' => 'system/modules/league-manager/templates',
 	'lm_contestreader_rounds'        => 'system/modules/league-manager/templates',
@@ -59,7 +59,9 @@ TemplateLoader::addFiles(array
 	'lm_playerreader_basic'          => 'system/modules/league-manager/templates',
 	'lm_teamreader_basic'            => 'system/modules/league-manager/templates',
 	'lm_teamreader_lastmatch'        => 'system/modules/league-manager/templates',
+	'lm_teamreader_lastmatch_table'  => 'system/modules/league-manager/templates',
 	'lm_teamreader_matches'          => 'system/modules/league-manager/templates',
 	'lm_teamreader_matches_table'    => 'system/modules/league-manager/templates',
 	'lm_teamreader_nextmatch'        => 'system/modules/league-manager/templates',
+	'lm_teamreader_nextmatch_table'  => 'system/modules/league-manager/templates',
 ));

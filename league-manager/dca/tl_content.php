@@ -57,9 +57,9 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_events'] = '{type_l
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedmatch,lm_se_friendly;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_reports'] = '{type_legend},type,headline;{lm_settings},lm_usefixedmatch,lm_reporttype;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo,lm_se_friendly;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_lastmatch'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_nextmatch'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_matches'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_usefixedcontest;{lm_redirect},lm_useredirectmatch;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_lastmatch'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_nextmatch'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_matches'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_usefixedcontest,lm_showlogo;{lm_redirect},lm_useredirectmatch;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_playerreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedplayer,lm_se_friendly;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_resultform'] = '{type_legend},type,headline{lm_settings},lm_usefixedcontest;{expert_legend:hide},cssID,space';
 

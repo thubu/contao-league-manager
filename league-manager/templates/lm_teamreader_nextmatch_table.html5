@@ -11,37 +11,49 @@
 		<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
 	<?php endif; ?>
 	<?php if($this->hasTeamid): ?>
+		<table class="matches">
 		<?php if ($this->match_found==1): ?>
-			
-			<div class="info">
+			<tr class="round"><th colspan="3" class="info">
+
 					<span class="date"><?php echo $this->date; ?></span>
 					<span class="time"><?php echo $this->time; ?></span>
-			</div>
-			
-			<div class="match">
-					<span class="home<?php if($this->home_own==1): ?> own<?php endif; ?>">
+					
+			</th></tr>
+		</table>
+		
+		<table class="teams">		
+			<tr class="match">
+					<?php if ($this->show_logo==1 && $this->home_logo!=''): ?>
+					<td>  		<img src="./<?php echo $this->home_logo; ?>" />
+					</td><?php endif; ?>
+					<td> 		<span class="home<?php if($this->home_own==1): ?> own<?php endif; ?>">
 							<?php if($this->redirecthome!=''): ?><a href="<?php echo $this->redirecthome; ?>"><?php endif; ?>
-							<?php if ($this->show_logo==1 && $this->home_logo!=''): ?><img src="./<?php echo $this->home_logo; ?>" /><?php endif; ?>
 							<span class="name"><?php echo $this->home_name; ?></span>
 							<?php if($this->redirecthome!=''): ?></a><?php endif; ?></span>
-					<span class="versus">&nbsp:&nbsp</span>																							
-					<span class="away<?php if($this->away_own==1): ?> own<?php endif; ?>">
+					</td>
+					<td class="versus">&nbsp:&nbsp</td>
+					<?php if ($this->show_logo==1 && $this->away_logo!=''): ?>
+					<td>		<img src="./<?php echo $this->away_logo; ?>" />
+					</td><?php endif; ?>
+					<td>  <span class="away<?php if($this->away_own==1): ?> own<?php endif; ?>">
 							<?php if($this->redirectaway!=''): ?><a href="<?php echo $this->redirectaway; ?>"><?php endif; ?>
-							<?php if ($this->show_logo==1 && $this->away_logo!=''): ?><img src="./<?php echo $this->away_logo; ?>" /><?php endif; ?>
 							<span class="name"><?php echo $this->away_name; ?></span>
 							<?php if($this->redirectaway!=''): ?></a><?php endif; ?></span>
-			</div>
-			
-			<div class="place">
-					<span class="location"><?php echo $this->location; ?></span>
-			</div>
-
-			<?php if($this->redirectmatch!=''): ?>
-			<div class="matchinfo">
-					<a href="<?php echo $this->redirectmatch; ?>"><?php echo($GLOBALS['TL_LANG']['league-manager']['matchreader_nextmatch']['matchinfos']); ?></a>
-			</div><?php endif; ?>
-
-
+					</td>
+			</tr>
+		</table>
+		<table class="place">
+				<tr class="location">		
+					<td colspan="3"><span class="location"><?php echo $this->location; ?></span>
+					</td>
+				</tr>
+				<?php if($this->redirectmatch!=''): ?>
+				<tr class="report">
+				<td colspan="3"><span class="matchinfo"><a href="<?php echo $this->redirectmatch; ?>">
+				<?php echo($GLOBALS['TL_LANG']['league-manager']['matchreader_nextmatch']['matchinfos']); ?></a>
+				</tr><?php endif; ?>
+		</table>
 		<?php endif; ?>
 	<?php endif; ?>
+
 </div>

@@ -40,6 +40,15 @@ class lm_teamreader_nextmatch extends ContentElement
 			{
 				$return.="Variable team";
 			}
+			if($this->lm_template=="div")
+			{
+				$return.=$GLOBALS['TL_LANG']['league-manager']['misc']['with_div'];
+			}
+				else
+			{
+				$return.=$GLOBALS['TL_LANG']['league-manager']['misc']['with_table'];
+			}
+
 			return $return;
 		}
 		return parent::generate();
@@ -50,6 +59,18 @@ class lm_teamreader_nextmatch extends ContentElement
 	 */
 	protected function compile()
 	{
+		switch($this->lm_template){
+			case "div":
+				$objTemplate = new FrontendTemplate("lm_teamreader_nextmatch");
+				break;
+			case "table":
+				$objTemplate = new FrontendTemplate("lm_teamreader_nextmatch_table");
+				break;
+			default:
+				$objTemplate = new FrontendTemplate("lm_teamreader_nextmatch");
+		}
+		$this->Template=$objTemplate;
+
 		//Get team id from get variable or from content element settings
 		if($this->lm_usefixedteam=="1"){
 			$teamid = $this->lm_team;
@@ -68,10 +89,37 @@ class lm_teamreader_nextmatch extends ContentElement
 				$away=$this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($objMatch->team_away);
 				$this->Template->show_logo=$this->lm_showlogo;
 				$this->Template->home_name=$home->name;
-				$this->Template->home_logo=$home->logo;
+				if (!is_numeric($home->logo))
+				{
+				    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+				}
+				$objFile = \FilesModel::findByPk($home->logo);
+				$home->logo = $objFile->path;
+				$this->Template->home_logo=$objFile->path;
+
 				$this->Template->home_own=$home->ownteam;
+				if($objMatch->venue == 'H'){
+									$this->Template->location=$home->location;
+									$this->Template->city=$home->city;
+								}
+								else if($objMatch->venue == 'O'){
+									$this->Template->location=$objMatch->location;
+									$this->Template->city=$objMatch->city;
+								}
+								else{
+									$this->Template->location=$away->location;
+									$this->Template->city=$away->city;
+				}
 				$this->Template->away_name=$away->name;
-				$this->Template->away_logo=$away->logo;
+								if (!is_numeric($away->logo))
+								{
+								    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+								}
+								$objFile = \FilesModel::findByPk($away->logo);
+								$away->logo = $objFile->path;
+								$this->Template->away_logo=$objFile->path;
+
+
 				$this->Template->away_own=$away->ownteam;
 				$this->Template->match_found=1;
 				$this->Template->date=date($GLOBALS['TL_CONFIG']['dateFormat'],$objMatch->startdate);
@@ -112,3 +160,5 @@ class lm_teamreader_nextmatch extends ContentElement
 		}//if($teamid)
 	}
 }
+
+?>
