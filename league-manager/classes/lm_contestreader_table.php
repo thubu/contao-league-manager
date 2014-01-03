@@ -83,6 +83,14 @@ class lm_contestreader_table extends ContentElement
 			while($teams->next()){
 				$objTeam = $this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($teams->team);
 
+								if (!is_numeric($objTeam->logo))
+								{
+								    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+								}
+								$objFile = \FilesModel::findByPk($objTeam->logo);
+								$objTeam->logo = $objFile->path;
+
+
 				switch($this->lm_linktype_team)
 					{
 						case 'NOL':
@@ -128,6 +136,8 @@ class lm_contestreader_table extends ContentElement
 						default:
 							$redirect='';
 					}
+
+
 				$arrTeams[$teams->team]=array(
 				'id'=>$objTeam->id,
 				'teamname'=>$objTeam->name,
@@ -144,7 +154,7 @@ class lm_contestreader_table extends ContentElement
 				'pointstotal'=>0,
 				'penalties'=>0,
 				'haspenalties'=>false,
-				'logo'=>$objTeam->logo,
+				'logo'=>$objFile->path,
 				'ownteam'=>$objTeam->ownteam,
 				'redirect'=>$redirect
 				);

@@ -15,18 +15,21 @@
 * Content elements
 */
 $GLOBALS['TL_LANG']['CTE']['league-manager'] = 'Ligaverwaltung';
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_basic']   = array('Wettbewerbsleser - Grunddaten', 'Zeigt die Grundinformationen eines Wettbewerbs an.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_teams']   = array('Wettbewerbsleser - Mannschaften', 'Listet alle teilnehmenden Mannschaften eines Wettbewerbs auf.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_rounds']   = array('Wettbewerbsleser - Runden', 'Listet alle Runden eines Wettbewerbs auf.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_matches']   = array('Wettbewerbsleser - Matches', 'Listet alle Matches eines Wettbewerbs auf.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_table']   = array('Wettbewerbsleser - Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_hometable']   = array('Wettbewerbsleser - Heim-Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_awaytable']   = array('Wettbewerbsleser - Ausw&auml;rts-Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
-$GLOBALS['TL_LANG']['CTE']['lm_contestreader_crosstable']   = array('Wettbewerbsleser - Kreuztabelle', 'Generiert eine Kreuztabelle f&uuml;r einen Wettbewerb.');
-$GLOBALS['TL_LANG']['CTE']['lm_teamreader_lastmatch']   = array('Mannschaftsleser - Letztes Match', 'Zeigt das letzte Match einer Mannschaft an.');
-$GLOBALS['TL_LANG']['CTE']['lm_teamreader_nextmatch']   = array('Mannschaftsleser - N&auml;chstes Match', 'Zeigt das n&auml;chste Match einer Mannschaft an.');
-$GLOBALS['TL_LANG']['CTE']['lm_teamreader_basic']   = array('Mannschaftsleser - Grunddaten', 'Zeigt Grundinformationen &uuml;ber eine Mannschaft an.');
-$GLOBALS['TL_LANG']['CTE']['lm_teamreader_matches']   = array('Mannschaftsleser - Matches', 'Zeigt die Matches einer Mannschaft an.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_basic']   = array('Wettbewerb - Grunddaten', 'Zeigt die Grundinformationen eines Wettbewerbs an.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_teams']   = array('Wettbewerb - Mannschaften', 'Listet alle teilnehmenden Mannschaften eines Wettbewerbs auf.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_rounds']   = array('Wettbewerb - Runden', 'Listet alle Runden eines Wettbewerbs auf.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_matches']   = array('Wettbewerb - Matches', 'Listet alle Matches eines Wettbewerbs auf.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_table']   = array('Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_table_short']   = array('Tabelle, Shortname', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb. Mannschaftesnamen -> Kurzbezeichnung.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_hometable']   = array('Heim-Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_hometable_short']   = array('Heim-Tabelle, Shortname', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb. Mannschaftesnamen -> Kurzbezeichnung.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_awaytable']   = array('Ausw&auml;rts-Tabelle', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_awaytable_short']   = array('Ausw&auml;rts-Tabelle, Shortname', 'Generiert eine Ergebnistabelle f&uuml;r einen Wettbewerb. Mannschaftesnamen -> Kurzbezeichnung.');
+$GLOBALS['TL_LANG']['CTE']['lm_contestreader_crosstable']   = array('Wettbewerb - Kreuztabelle', 'Generiert eine Kreuztabelle f&uuml;r einen Wettbewerb.');
+$GLOBALS['TL_LANG']['CTE']['lm_teamreader_lastmatch']   = array('Mannschaft - Letztes Match', 'Zeigt das letzte Match einer Mannschaft an.');
+$GLOBALS['TL_LANG']['CTE']['lm_teamreader_nextmatch']   = array('Mannschaft - N&auml;chstes Match', 'Zeigt das n&auml;chste Match einer Mannschaft an.');
+$GLOBALS['TL_LANG']['CTE']['lm_teamreader_basic']   = array('Mannschaft - Grunddaten', 'Zeigt Grundinformationen &uuml;ber eine Mannschaft an.');
+$GLOBALS['TL_LANG']['CTE']['lm_teamreader_matches']   = array('Mannschaft - Matches', 'Zeigt die Matches einer Mannschaft an.');
 $GLOBALS['TL_LANG']['CTE']['lm_matchreader_events']   = array('League Manager - Matchleser - Ereignisse', 'Listet alle Ereignisse eines Matches auf.');
 $GLOBALS['TL_LANG']['CTE']['lm_matchreader_basic']   = array('League Manager - Matchleser - Grundinformationen', 'Zeigt die Grundinformationen eines Matches an.');
 $GLOBALS['TL_LANG']['CTE']['lm_matchreader_reports']   = array('League Manager - Matchleser - Berichte', 'Zeigt die Berichte eines Matches an.');
@@ -54,6 +57,26 @@ $GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointspenalty']   = 'P Str
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_from']   = 'Zeige Runden von';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_to']   = 'bis';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_submit']   = 'Anzeigen';
+
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Place']   = 'Pl.';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Logo']   = 'Logo';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Team']   = 'Team';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Matches']  = 'Mat.';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Win']   = 'S';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Draw']   = 'U';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Lose']   = 'N';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Resplus']   = 'Erg. +';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Resminus']   = 'Erg. -';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Resdiff']   = 'Erg. diff';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointsplus']   = 'P +';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointsminus']   = 'P -';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointsdiff']   = 'P diff';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointstotal']   = 'P total';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointspenalty']   = 'P Strafe';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['select_round_from']   = 'Zeige Runden von';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['select_round_to']   = 'bis';
+$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['select_round_submit']   = 'Anzeigen';
+
 
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['league']   = 'Wettbewerb:';
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['start']   = 'Erster Spieltag:';

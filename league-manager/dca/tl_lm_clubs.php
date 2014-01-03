@@ -137,7 +137,7 @@ $GLOBALS['TL_DCA']['tl_lm_clubs'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['logo'],
 			'exclude'                 => false,
 			'inputType'               => 'fileTree',
-			'eval'                    => array('mandatory'=>false, 'fieldType'=>'radio', 'files'=>true, 'filesOnly'=>true)
+			'eval'                    => array('mandatory'=>false, 'fieldType'=>'radio', 'files'=>true, 'filesOnly'=>true, 'storeId=>true')
 		),
 		'ownclub' => array
 		(

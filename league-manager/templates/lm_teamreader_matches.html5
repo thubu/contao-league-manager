@@ -28,12 +28,6 @@
 									</div>
 									<div class="teams">
 										<?php if($match['redirect']!=''): ?><a href="<?php echo($match['redirect']); ?>"><?php endif; ?>
-										
-										<?php if ($this->show_logo==1 && $this->home_logo!=''): ?><?php if (!is_numeric($this->home_logo))
-										//convert DB file ID into file path ($objFile->path) 
-										$objFile = \FilesModel::findByPk($this->home_logo);$path=$objFile->path;?><img src="<?php echo \FilesModel::findByPk($this->home_logo)->path; ?>">
-										<?php endif; ?> 
-										
 										<span class="hometeam<?php if($match['home_own']==1): ?> own<?php endif; ?>"><?php echo $match['home']; ?></span>
 										<span class="versus">:</span>
 										<span class="awayteam<?php if($match['away_own']==1): ?> own<?php endif; ?>"><?php echo $match['away']; ?></span>

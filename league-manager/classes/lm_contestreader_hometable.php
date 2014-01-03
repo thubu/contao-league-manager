@@ -83,6 +83,14 @@ class lm_contestreader_hometable extends ContentElement
 			while($teams->next()){
 				$objTeam = $this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($teams->team);
 
+								if (!is_numeric($objTeam->logo))
+								{
+								    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+								}
+								$objFile = \FilesModel::findByPk($objTeam->logo);
+								$objTeam->logo = $objFile->path;
+
+
 				switch($this->lm_linktype_team)
 					{
 						case 'NOL':

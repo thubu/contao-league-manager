@@ -11,27 +11,27 @@
 
 
 /**
- * Class lm_contestreader_table
+ * Class lm_contestreader_table_short
  *
  * @copyright  2010 Andreas Koob
  * @author     Andreas Koob
  * @package    Controller
  */
-class lm_contestreader_awaytable extends ContentElement
+class lm_contestreader_awaytable_short extends ContentElement
 {
 
 	/**
 	 * Template
 	 * @var string
 	 */
-	protected $strTemplate = 'lm_contestreader_awaytable';
+	protected $strTemplate = 'lm_contestreader_awaytable_short';
 
 
 	public function generate()
 	{
 		if (TL_MODE == 'BE')
 		{
-			$return = "Contest reader - awaytable<br />";
+			$return = "Contest reader - awaytable_short<br />";
 			if($this->lm_usefixedcontest=="1"){
 				$objContest =$this->Database->prepare("SELECT * FROM tl_lm_contests WHERE id=?")->execute($this->lm_contest);
 				$return.="Fixed contest: " . $objContest->name;
@@ -139,7 +139,7 @@ class lm_contestreader_awaytable extends ContentElement
 					}
 				$arrTeams[$teams->team]=array(
 				'id'=>$objTeam->id,
-				'teamname'=>$objTeam->name,
+				'teamname'=>$objTeam->shortname,
 				'matches'=>0,
 				'win'=>0,
 				'draw'=>0,

@@ -155,6 +155,15 @@ class lm_teamreader_matches extends ContentElement
 							$redirect='';
 						}
 
+				if (!is_numeric($home->logo))
+				{
+				    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+				}
+				$objFile = \FilesModel::findByPk($home->logo);
+				$home->logo = $objFile->path;
+
+
+
 
 						$arrMatches[$i][]=array(
 							'matchid'=>$objMatches->id,
@@ -215,6 +224,15 @@ class lm_teamreader_matches extends ContentElement
 					else{
 						$awayscorehalftime='-';
 					}
+
+
+				if (!is_numeric($home->logo))
+				{
+				    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+				}
+				$objFile = \FilesModel::findByPk($objMatches->homelogo);
+				$home->logo = $objFile->path;
+
 
 					$arrMatches[$i][]=array(
 						'matchid'=>$objMatches->id,
