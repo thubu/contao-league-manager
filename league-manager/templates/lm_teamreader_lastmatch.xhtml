@@ -36,14 +36,15 @@
 			<!-- </div>
 		
 			<div class="score"> -->
-					<span class="scorehome"><?php echo $this->home_score; ?></span>
+				<span class="home<?php if($this->home_own==1): ?> own<?php endif; ?>">
+					<span class="scorehome<?php if($this->home_own==1): ?> own<?php endif; ?>"><?php echo $this->home_score; ?></span>
 					<span class="versus">&nbsp:&nbsp</span>																					
-					<span class="awayscore"><?php echo $this->away_score; ?></span>
-					
+					<span class="awayscore<?php if($this->away_own==1): ?> own<?php endif; ?>"><?php echo $this->away_score; ?></span>
 					<span class="versus">(</span>
+				<span class="away<?php if($this->away_own==1): ?> own<?php endif; ?>">
 					<span class="halftimescorehome"><?php echo $this->home_halftimescore; ?></span>
 					<span class="versus">&nbsp:&nbsp</span>
-					<span class="halftimeawayscore"><?php echo $this->away_halftimescore; ?></span>
+					<span class="halftimeawayscore<?php if($this->away_own==1): ?> own<?php endif; ?>"><?php echo $this->away_halftimescore; ?></span>
 					<span class="versus">)</span>
 			</div>
 			

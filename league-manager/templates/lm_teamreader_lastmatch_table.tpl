@@ -40,14 +40,14 @@
 		<span class="name"><?php echo $this->away_name; ?></span>
 		<?php if($this->redirectaway!=''): ?></a><?php endif; ?></span>
 		</td>
-		<td class="scorehome"><?php echo $this->home_score; ?>
+		<td class="scorehome<?php if($match['home_own']==1): ?> own<?php endif; ?>"><?php echo $this->home_score; ?>
 		</td>
 		<td class="versus">&nbsp:&nbsp</td>
-		<td class="awayscore"><?php echo $this->away_score; ?></td>
+		<td class="awayscore<?php if($match['away_own']==1): ?> own<?php endif; ?>"<?php echo $this->away_score; ?></td>
 		<td class="versus">(</td>
-		<td class="halftimescorehome"><?php echo $this->home_halftimescore; ?></td>
+		<td class="halftimescorehome<?php if($match['home_own']==1): ?> own<?php endif; ?>"><?php echo $this->home_halftimescore; ?></td>
 		<td class="versus">&nbsp:&nbsp</td>
-		<td class="halftimeawayscore"><?php echo $this->away_halftimescore; ?></td>
+		<td class="halftimeawayscore<?php if($match['away_own']==1): ?> own<?php endif; ?>"<?php echo $this->away_halftimescore; ?></td>
 		<td class="versus">)</td>
 	</tr>
 		</table>
