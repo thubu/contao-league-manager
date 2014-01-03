@@ -33,7 +33,7 @@
 								<td class="versus">:</td>
 								<td class="scoreaway<?php if($match['away_own']==1): ?> own<?php endif; ?>"><?php echo $match['awayscore']; ?></span></td>
 								<td class="versus">(</td>
-								<td class="scorehomehalftime<?php if($match['home_own']==1): ?> own<?php endif; ?>"><?php echo $match['homescorehalftimee']; ?></td>
+								<td class="scorehomehalftime<?php if($match['home_own']==1): ?> own<?php endif; ?>"><?php echo $match['homescorehalftime']; ?></td>
 								<td class="versus">:</td>
 								<td class="scoreawayhalftime<?php if($match['away_own']==1): ?> own<?php endif; ?>"><?php echo $match['awayscorehalftime']; ?></span></td>
 								<td class="versus">)</td>
