@@ -214,18 +214,64 @@ CREATE TABLE `tl_lm_clubs` (
   `tstamp` int(10) unsigned NOT NULL default '0',
   `pid` int(10) NOT NULL default '0',
   `name` varchar(255) NOT NULL default '',
-  `shortname` varchar(10) NOT NULL default '',
+  `shortname` varchar(255) NOT NULL default '',
   `sortstring` varchar(255) NOT NULL default '',
+  `street` varchar(255) NULL default '',
+  `zip` varchar(255) NULL default '',
+  `city` varchar(255) NULL default '',
+  `country` varchar(255) NULL default '',
+  `phone` varchar(255) NULL default '',
+  `fax` varchar(255) NULL default '',
+  `mail` varchar(255) NULL default '',
   `website` varchar(255) NULL default '',
-  `hasinternal_page` char(1) NOT NULL default '',
   `internal_page` int(10) NOT NULL default '0',
   `logo` varchar(255) NULL default '',
   `ownclub` char(1) NOT NULL default '',
+  `founded` varchar(255) NULL default '',
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM default CHARSET=utf8;
 
 -- --------------------------------------------------------
+
+
+-- 
+-- Table `tl_lm_stadium`
+-- 
+
+CREATE TABLE `tl_lm_stadium` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `tstamp` int(10) unsigned NOT NULL default '0',
+  `pid` int(10) NOT NULL default '0',
+  `name` varchar(255) NOT NULL default '',
+  `shortname` varchar(255) NOT NULL default '',
+  `sortstring` varchar(255) NOT NULL default '',
+  `street` varchar(255) NULL default '',
+  `zip` varchar(255) NULL default '',
+  `city` varchar(255) NULL default '',
+  `country` varchar(255) NULL default '',
+  `phone` varchar(255) NULL default '',
+  `fax` varchar(255) NULL default '',
+  `mail` varchar(255) NULL default '',
+  `website` varchar(255) NULL default '',
+  `internal_page` int(10) NOT NULL default '0',
+  `logo` varchar(255) NULL default '',
+  `buildyear` varchar(255) NULL default '',
+  `capacity` varchar(255) NULL default '',
+  `capacityinternational` varchar(255) NULL default '',
+  `seats` varchar(255) NULL default '',
+  `seatsroofed` varchar(255) NULL default '',
+  `standings` varchar(255) NULL default '',
+  `standingsroofed` varchar(255) NULL default '',
+  `lodges` varchar(255) NULL default '',
+  `subsoil` varchar(255) NULL default '',  
+  `undersoilheating` varchar(255) NULL default '',
+  `fieldsize` varchar(255) NULL default '',  
+  PRIMARY KEY  (`id`),
+  KEY `pid` (`pid`)
+) ENGINE=MyISAM default CHARSET=utf8;
+-- --------------------------------------------------------
+
 
 -- 
 -- Table `tl_lm_teams_to_club`
@@ -341,14 +387,22 @@ CREATE TABLE `tl_content` (
   `lm_useredirectmatch` char(1) NOT NULL default '',
   `lm_useredirectplayer` char(1) NOT NULL default '',
   `lm_useredirectteam` char(1) NOT NULL default '',
+  `lm_useredirectclub` char(1) NOT NULL default '',
   `lm_useredirectcontest` char(1) NOT NULL default '',
+  `lm_useredirectstadium` char(1) NOT NULL default '',
   `lm_redirectplayer` int(10) NOT NULL default '0',
   `lm_redirectteam` int(10) NOT NULL default '0',
+  `lm_redirectclub` int(10) NOT NULL default '0',
   `lm_redirectmatch` int(10) NOT NULL default '0',
   `lm_redirectcontest` int(10) NOT NULL default '0',
+  `lm_redirectstadium` int(10) NOT NULL default '0',  
   `lm_template` varchar(255) NOT NULL default '',
   `lm_usefixedteam` char(1) NOT NULL default '',
   `lm_team` int(10) NOT NULL default '0',
+  `lm_usefixedclub` char(1) NOT NULL default '',
+  `lm_club` int(10) NOT NULL default '0',
+  `lm_usefixedstadium` char(1) NOT NULL default '',
+  `lm_stadium` int(10) NOT NULL default '0',
   `lm_usefixedcontest` char(1) NOT NULL default '',
   `lm_contest` int(10) NOT NULL default '0',
   `lm_usefixedplayer` char(1) NOT NULL default '',
@@ -363,11 +417,15 @@ CREATE TABLE `tl_content` (
   `lm_dateto` int(10) NOT NULL default '0',
   `lm_linktype_player` char(3) NOT NULL default '',
   `lm_linktype_team` char(3) NOT NULL default '',
+  `lm_linktype_club` char(3) NOT NULL default '',
   `lm_linktype_match` char(3) NOT NULL default '',
+  `lm_linktype_stadium` char(3) NOT NULL default '',
   `lm_linktype_contest` char(3) NOT NULL default '',
   `lm_link_player_new_window` char(1) NOT NULL default '',
   `lm_link_team_new_window` char(1) NOT NULL default '',
+  `lm_link_club_new_window` char(1) NOT NULL default '',
   `lm_link_match_new_window` char(1) NOT NULL default '',
+  `lm_link_stadium_new_window` char(1) NOT NULL default '',
   `lm_link_contest_new_window` char(1) NOT NULL default ''
 ) ENGINE=MyISAM default CHARSET=utf8;
 Status API Training Shop Blog About © 2013 GitHub, Inc. Terms Privacy Security Contact 

@@ -41,9 +41,9 @@ $GLOBALS['TL_LANG']['tl_lm_matches']['result_confirmed'] = array('Ergebnis best&
 
 $GLOBALS['TL_LANG']['tl_lm_matches']['matchlocation'] = 'Austragungsort';
 $GLOBALS['TL_LANG']['tl_lm_matches']['venue'] = array('Ort', 'Definiert den Austragungsort des Matches');
-$GLOBALS['TL_LANG']['tl_lm_matches']['location'] = array('Lokation', 'Ort, an dem das Match statt findet');
-$GLOBALS['TL_LANG']['tl_lm_matches']['street'] = array('Stra&szlig;e', 'Stra&szlig;e des Austragungsortes');
-$GLOBALS['TL_LANG']['tl_lm_matches']['zip'] = array('Postleitzahl', 'Postleitzahl des Austragungsortes');
+$GLOBALS['TL_LANG']['tl_lm_matches']['location'] = array('Stadion', 'Stadion, in dem das Spiel statt findet');
+$GLOBALS['TL_LANG']['tl_lm_matches']['street'] = array('Stra&szlig;e', 'Stra&szlig;e des Stadions');
+$GLOBALS['TL_LANG']['tl_lm_matches']['zip'] = array('Postleitzahl', 'Postleitzahl des Stadions');
 $GLOBALS['TL_LANG']['tl_lm_matches']['city'] = array('Stadt', 'Stadt in der das Match stattfindet');
 $GLOBALS['TL_LANG']['tl_lm_matches']['region'] = array('Region', 'Region in der das Match stattfindet (z.B. Staat)');
 

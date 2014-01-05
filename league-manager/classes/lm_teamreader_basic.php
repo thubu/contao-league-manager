@@ -100,7 +100,8 @@ class lm_teamreader_basic extends ContentElement
 				}
 
 			}
-			else{
+			else
+			{
 				$this->Template->team_found=0;
 			}
 			$this->Template->hasTeamid=$teamid;
@@ -108,3 +109,4 @@ class lm_teamreader_basic extends ContentElement
 		}//if($teamid)
 	}
 }
+

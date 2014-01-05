@@ -73,14 +73,17 @@ $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_hometable'] = 'lm_contest
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_hometable_short'] = 'lm_contestreader_hometable_short';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_awaytable'] = 'lm_contestreader_awaytable';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_awaytable_short'] = 'lm_contestreader_awaytable_short';
-$GLOBALS['TL_CTE']['league-manager']['lm_teamreader_basic'] = 'lm_teamreader_basic';
-$GLOBALS['TL_CTE']['league-manager']['lm_teamreader_nextmatch'] = 'lm_teamreader_nextmatch';
-$GLOBALS['TL_CTE']['league-manager']['lm_teamreader_lastmatch'] = 'lm_teamreader_lastmatch';
-$GLOBALS['TL_CTE']['league-manager']['lm_teamreader_matches'] = 'lm_teamreader_matches';
+$GLOBALS['TL_CTE']['league-manager-teams']['lm_teamreader_basic'] = 'lm_teamreader_basic';
+$GLOBALS['TL_CTE']['league-manager-teams']['lm_teamreader_nextmatch'] = 'lm_teamreader_nextmatch';
+$GLOBALS['TL_CTE']['league-manager-teams']['lm_teamreader_nextmatch_short'] = 'lm_teamreader_nextmatch_short';
+$GLOBALS['TL_CTE']['league-manager-teams']['lm_teamreader_lastmatch'] = 'lm_teamreader_lastmatch';
+$GLOBALS['TL_CTE']['league-manager-teams']['lm_teamreader_lastmatch_short'] = 'lm_teamreader_lastmatch_short';
+$GLOBALS['TL_CTE']['league-manager-teams']['lm_teamreader_matches'] = 'lm_teamreader_matches';
 $GLOBALS['TL_CTE']['league-manager']['lm_matchreader_basic'] = 'lm_matchreader_basic';
 $GLOBALS['TL_CTE']['league-manager']['lm_matchreader_events'] = 'lm_matchreader_events';
 $GLOBALS['TL_CTE']['league-manager']['lm_matchreader_reports'] = 'lm_matchreader_reports';
 $GLOBALS['TL_CTE']['league-manager']['lm_playerreader_basic'] = 'lm_playerreader_basic';
+$GLOBALS['TL_CTE']['league-manager']['lm_clubreader_basic'] = 'lm_clubreader_basic';
 /**
  * -------------------------------------------------------------------------
  * BACK END FORM FIELDS

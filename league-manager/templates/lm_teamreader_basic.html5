@@ -17,6 +17,7 @@
 					<img src="<?php echo($this->lm_showlogo); ?>" />
 				</div>
 			<?php endif; ?>
+			
 			<div class="team"<?php if($this->se_friendly==1): ?> itemscope itemtype="http://data-vocabulary.org/Organization"<?php endif; ?>
 				<div class="name">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['name']); ?></span>
@@ -60,4 +61,3 @@
 			<?php endif; ?>
 		<?php endif; ?>
 	<?php endif; ?>
-</div>

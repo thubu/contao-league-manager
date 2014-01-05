@@ -33,15 +33,20 @@
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectmatch';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectplayer';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectteam';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectclub';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectcontest';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedteam';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedclub';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedcontest';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedmatch';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedplayer';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_player';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_team';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_club';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_match';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_contest';
+
+
 
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_teams'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest,lm_showlogo;{lm_redirect},lm_linktype_team;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
@@ -61,16 +66,23 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_basic'] = '{type_le
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_reports'] = '{type_legend},type,headline;{lm_settings},lm_usefixedmatch,lm_reporttype;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo,lm_se_friendly;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_lastmatch'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_lastmatch_short'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_nextmatch'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_nextmatch_short'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_showlogo;{lm_redirect},lm_useredirectmatch,lm_useredirectteam;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_matches'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_usefixedcontest,lm_showlogo;{lm_redirect},lm_useredirectmatch;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_playerreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedplayer,lm_se_friendly;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_resultform'] = '{type_legend},type,headline{lm_settings},lm_usefixedcontest;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_clubreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedclub,lm_showlogo,lm_se_friendly;{expert_legend:hide},cssID,space';
+
+
 
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectplayer'] = 'lm_redirectplayer';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectteam'] = 'lm_redirectteam';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectclub'] = 'lm_redirectclub';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectmatch'] = 'lm_redirectmatch';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectcontest'] = 'lm_redirectcontest';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedcontest'] = 'lm_contest';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedclub'] = 'lm_club';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedteam'] = 'lm_team';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedmatch'] = 'lm_match';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedplayer'] = 'lm_player';
@@ -82,6 +94,10 @@ $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_team_NOL']='';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_team_INT']='lm_link_team_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_team_EXT']='lm_link_team_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_team_FIX']='lm_redirectteam,lm_link_team_new_window';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_club_NOL']='';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_club_INT']='lm_link_club_new_window';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_club_EXT']='lm_link_club_new_window';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_club_FIX']='lm_redirectclub,lm_link_club_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_match_NOL']='';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_match_INT']='lm_link_match_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_match_EXT']='lm_link_match_new_window';
@@ -116,6 +132,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_team'] = array
 	'eval'                    => array('mandatory'=>true),
 	'options_callback'        => array('tl_content_lm', 'getTeams')
 );
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_club'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_club'],
+	'exclude'                 => false,
+	'inputType'               => 'select',
+	'eval'                    => array('mandatory'=>true),
+	'options_callback'        => array('tl_content_lm', 'getClubs')
+);
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectplayer'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_redirectplayer'],
@@ -126,6 +150,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectplayer'] = array
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectteam'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_redirectteam'],
+	'exclude'                 => false,
+	'inputType'               => 'pageTree',
+	'eval'                    => array('mandatory'=>true,'fieldType'=>'radio', 'tl_class'=>'clr')
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectclub'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_redirectclub'],
 	'exclude'                 => false,
 	'inputType'               => 'pageTree',
 	'eval'                    => array('mandatory'=>true,'fieldType'=>'radio', 'tl_class'=>'clr')
@@ -165,6 +196,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_useredirectteam'] = array
 	'inputType'               => 'checkbox',
 	'eval'                    => array('submitOnChange'=>true)
 );
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_useredirectclub'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_useredirectclub'],
+	'exclude'                 => false,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('submitOnChange'=>true)
+);
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_useredirectcontest'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_useredirectcontest'],
@@ -193,6 +231,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_tablefields'] = array
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_usefixedteam'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_usefixedteam'],
+	'exclude'                 => false,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('submitOnChange'=>true)
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_usefixedclub'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_usefixedclub'],
 	'exclude'                 => false,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('submitOnChange'=>true)
@@ -279,7 +324,16 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_linktype_team'] = array
 	'exclude'                 => false,
 	'inputType'               => 'select',
 	'eval'                    => array('mandatory'=>true,'submitOnChange'=>true),
-	'options'				  => array('NOL','FIX','INT','EXT'),
+	'options'				  => array('NOL','FIX'/**,'INT'*/,'EXT'),
+	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['lm_linktypes']['reference']
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_linktype_club'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_linktype_club'],
+	'exclude'                 => false,
+	'inputType'               => 'select',
+	'eval'                    => array('mandatory'=>true,'submitOnChange'=>true),
+	'options'				  => array('NOL','FIX'/**,'INT'*/,'EXT'),
 	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['lm_linktypes']['reference']
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_linktype_match'] = array
@@ -308,6 +362,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_player_new_window'] = array
 	'eval'                    => array()
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_team_new_window'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_link_new_window'],
+	'exclude'                 => false,
+	'inputType'               => 'checkbox',
+	'eval'                    => array()
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_club_new_window'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_link_new_window'],
 	'exclude'                 => false,
@@ -437,5 +498,32 @@ class tl_content_lm extends Backend
 
 		return $return;
 	}
+		//Lists the clubs in the database
+		public function getClubs()
+		{
+			$objClubs = $this->Database->prepare("SELECT id, name, sortstring FROM tl_lm_clubs ORDER BY name ASC")->execute();
+
+			if ($objClubs->numRows < 1)
+			{
+				return array();
+			}
+
+			$return = array();
+
+			while ($objClubs->next())
+			{
+				if($objClubs->sortstring=="")
+				{
+					$return[$GLOBALS['TL_LANG']['league-manager']['misc']['nosortstring']][$objClubs->id] = $objClubs->name;
+				}
+				else
+				{
+					$return[$objClubs->sortstring][$objClubs->id] = $objClubs->name;
+				}
+			}
+
+			return $return;
+		}
+
 
 }

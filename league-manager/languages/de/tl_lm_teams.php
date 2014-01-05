@@ -19,10 +19,10 @@ $GLOBALS['TL_LANG']['tl_lm_teams']['sortstring']	= array ('Sortierbegriff', 'Beg
 
 $GLOBALS['TL_LANG']['tl_lm_teams']['team_location'] = 'Adresse';
 $GLOBALS['TL_LANG']['tl_lm_teams']['location'] = array('Ort', 'Name der Heimlokation (Z.B. Stadionname)');
-$GLOBALS['TL_LANG']['tl_lm_matches']['street'] = array('Stra&szlig;e', 'Stra&szlig;e der Heimlokation');
-$GLOBALS['TL_LANG']['tl_lm_matches']['zip'] = array('Postleitzahl', 'Postleitzahl der Heimlokation');
-$GLOBALS['TL_LANG']['tl_lm_matches']['city'] = array('Stadt', 'Stadt der Heimlokation');
-$GLOBALS['TL_LANG']['tl_lm_matches']['region'] = array('Region', 'Region der Heimlokation (z.B. Staat)');
+$GLOBALS['TL_LANG']['tl_lm_teams']['street'] = array('Stra&szlig;e', 'Stra&szlig;e der Heimlokation');
+$GLOBALS['TL_LANG']['tl_lm_teams']['zip'] = array('Postleitzahl', 'Postleitzahl der Heimlokation');
+$GLOBALS['TL_LANG']['tl_lm_teams']['city'] = array('Stadt', 'Stadt der Heimlokation');
+$GLOBALS['TL_LANG']['tl_lm_teams']['region'] = array('Region', 'Region der Heimlokation (z.B. Staat)');
 
 $GLOBALS['TL_LANG']['tl_lm_teams']['add_info'] = 'Zus&auml;tzliche Informationen';
 $GLOBALS['TL_LANG']['tl_lm_teams']['website']	= array ('Webseite', 'Adresse der Webseite');

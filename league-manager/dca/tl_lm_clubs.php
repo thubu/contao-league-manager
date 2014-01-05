@@ -90,14 +90,15 @@ $GLOBALS['TL_DCA']['tl_lm_clubs'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array(''),
-		'default'                     => 'name,shortname,sortstring,ownclub,website,logo'
+		'default'                     => 'name, shortname, sortstring, founded; ownclub;{club_adress}, zip, city, street, country;{add_info},website, mail, phone, fax; logo'
+
 	),
 
-	// Subpalettes
+/**	// Subpalettes
 	'subpalettes' => array
 	(
-		''                            => ''
-	),
+		'hasinternal_page'            => 'internal_page'
+	),*/
 
 	// Fields
 	'fields' => array
@@ -108,14 +109,14 @@ $GLOBALS['TL_DCA']['tl_lm_clubs'] = array
 			'exclude'                 => false,
 			'filter'				  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>true, 'rgxp'=>'alnum', 'maxlength'=>255, 'tl_class'=>'w50')
 		),
 		'shortname' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['shortname'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'rgxp'=>'alnum', 'unique'=>true)
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'rgxp'=>'alnum', 'unique'=>true, 'tl_class'=>'w50')
 		),
 		'sortstring' => array
 		(
@@ -123,14 +124,70 @@ $GLOBALS['TL_DCA']['tl_lm_clubs'] = array
 			'exclude'                 => false,
 			'filter'				  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'zip' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['zip'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>25, 'tl_class'=>'w50')
+		),
+		'city' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['city'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'street' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['street'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'country' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['country'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
 		'website' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['website'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'url')
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50', 'rgxp'=>'url')
+		),
+		'mail' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['mail'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'phone' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['phone'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'phone', 'tl_class'=>'w50')
+		),
+		'fax' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['fax'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'phone', 'tl_class'=>'w50')
+		),
+		'founded' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['founded'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'rgxp'=>'date', 'datepicker'=>$this->getDatePickerString(), 'tl_class'=>'w50')
 		),
 		'logo' => array
 		(
@@ -149,7 +206,6 @@ $GLOBALS['TL_DCA']['tl_lm_clubs'] = array
 		)
 	)
 );
-
 
 class tl_lm_clubs extends Backend
 {
