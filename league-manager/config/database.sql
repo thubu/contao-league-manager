@@ -192,7 +192,12 @@ CREATE TABLE `tl_lm_teams` (
   `street` varchar(255) NOT NULL default '',
   `zip` varchar(255) NOT NULL default '',
   `city` varchar(255) NOT NULL default '',
-  `region` varchar(255) NOT NULL default '',
+  `country` varchar(255) NOT NULL default '',
+  `locationtraining` varchar(255) NOT NULL default '',
+  `streettraining` varchar(255) NOT NULL default '',
+  `ziptraining` varchar(255) NOT NULL default '',
+  `citytraining` varchar(255) NOT NULL default '',
+  `countrytraining` varchar(255) NOT NULL default '',
   `website` varchar(255) NULL default '',
   `hasinternal_page` char(1) NOT NULL default '',
   `internal_page` int(10) NOT NULL default '0',
@@ -307,11 +312,44 @@ CREATE TABLE `tl_lm_players` (
   `hasinternal_page` char(1) NOT NULL default '',
   `internal_page` int(10) NOT NULL default '0',
   `birthday` varchar(10) NOT NULL default '',
+  `birthplace` varchar(10) NOT NULL default '',  
   `nationality` varchar(255) NULL default '',
   `position` varchar(255) NULL default '',
   `foot` varchar(255) NULL default '',
   `nickname` varchar(255) NULL default '',
   `picture` varchar(255) NULL default '',
+  `endofcareer` varchar(255) NULL default '',  
+  `addinfo` blob NULL,
+  PRIMARY KEY  (`id`),
+  KEY `pid` (`pid`)
+) ENGINE=MyISAM default CHARSET=utf8;
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table `tl_lm_coach`
+-- 
+
+CREATE TABLE `tl_lm_coach` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `tstamp` int(10) unsigned NOT NULL default '0',
+  `pid` int(10) NOT NULL default '0',
+  `name` varchar(255) NOT NULL default '',
+  `firstname` varchar(255) NOT NULL default '',
+  `surname` varchar(255) NOT NULL default '',
+  `shortname` varchar(10) NOT NULL default '',
+  `sortstring` varchar(255) NOT NULL default '',
+  `website` varchar(255) NULL default '',
+  `hasinternal_page` char(1) NOT NULL default '',
+  `internal_page` int(10) NOT NULL default '0',
+  `birthday` varchar(10) NOT NULL default '',
+  `birthplace` varchar(10) NOT NULL default '',  
+  `nationality` varchar(255) NULL default '',
+  `licence` varchar(255) NULL default '',
+  `nickname` varchar(255) NULL default '',
+  `picture` varchar(255) NULL default '',
+  `endofcareer` varchar(255) NULL default '',  
   `addinfo` blob NULL,
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`)

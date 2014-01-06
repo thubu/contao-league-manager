@@ -13,10 +13,11 @@
 	<?php if($this->hasTeamid): ?>
 		<?php if ($this->team_found==1): ?>
 			<?php if($this->logo!=''): ?>
-				<div class="logo">
+				<div class="teamlogo">
 					<img src="<?php echo($this->logo); ?>" />
 				</div>
 			<?php endif; ?>
+			
 			<div class="team"<?php if($this->se_friendly==1): ?> itemscope itemtype="http://data-vocabulary.org/Organization"<?php endif; ?>
 				<div class="name">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['name']); ?></span>
@@ -29,29 +30,72 @@
 				</div>
 			</div>
 			<div class="location"<?php if($this->se_friendly==1): ?> itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"<?php endif; ?>>
-				<div class="name">
+				<?php if($this->location!=''): ?>
+				<div class="location">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['location']); ?></span>
 					<span class="value"><?php echo $this->location; ?></span>
 				</div>
+				<?php endif; ?>
+				<?php if($this->street!=''): ?>
 				<div class="street">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['street']); ?></span>
 					<span class="value"<?php if($this->se_friendly==1): ?> itemprop="street-address"<?php endif; ?>><?php echo $this->street; ?></span>
-				</div> 
+				</div>
+				<?php endif; ?>
+				<?php if($this->zip!=''): ?>
 				<div class="zip">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['zip']); ?></span>
 					<span class="value"<?php if($this->se_friendly==1): ?> itemprop="postal-code"<?php endif; ?>><?php echo $this->zip; ?></span>
-				</div> 
+				</div>
+				<?php endif; ?>
+				<?php if($this->city!=''): ?>
 				<div class="city">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['city']); ?></span>
 					<span class="value"<?php if($this->se_friendly==1): ?> itemprop="locality"<?php endif; ?>><?php echo $this->city; ?></span>
 				</div> 
-				<?php if($this->region!=''): ?>
-					<div class="region">
-						<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['region']); ?></span>
-						<span class="value"<?php if($this->se_friendly==1): ?> itemprop="region"<?php endif; ?>><?php echo $this->region; ?></span>
+				<?php endif; ?>
+				<?php if($this->country!=''): ?>
+					<div class="country">
+						<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['country']); ?></span>
+						<span class="value"<?php if($this->se_friendly==1): ?> itemprop="region"<?php endif; ?>><?php echo $this->country; ?></span>
 					</div> 
 				<?php endif; ?>
 			</div>
+			
+			<div class="training"<?php if($this->se_friendly==1): ?> itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"<?php endif; ?>>
+				<?php if($this->locationtraining!=''): ?>
+				<div class="locationtraining">
+					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['locationtraining']); ?></span>
+					<span class="value"><?php echo $this->locationtraining; ?></span>
+				</div>
+				<?php endif; ?>
+				<?php if($this->streettraining!=''): ?>
+				<div class="streettraining">
+					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['streettraining']); ?></span>
+					<span class="value"<?php if($this->se_friendly==1): ?> itemprop="street-address"<?php endif; ?>><?php echo $this->streettraining; ?></span>
+				</div>
+				<?php endif; ?>
+				<?php if($this->ziptraining!=''): ?>
+				<div class="zip">
+					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['ziptraining']); ?></span>
+					<span class="value"<?php if($this->se_friendly==1): ?> itemprop="postal-code"<?php endif; ?>><?php echo $this->ziptraining; ?></span>
+				</div>
+				<?php endif; ?>
+				<?php if($this->citytraining!=''): ?>
+				<div class="city">
+					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['citytraining']); ?></span>
+					<span class="value"<?php if($this->se_friendly==1): ?> itemprop="locality"<?php endif; ?>><?php echo $this->citytraining; ?></span>
+				</div> 
+				<?php endif; ?>
+				<?php if($this->countrytraining!=''): ?>
+					<div class="country">
+						<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['countrytraining']); ?></span>
+						<span class="value"<?php if($this->se_friendly==1): ?> itemprop="region"<?php endif; ?>><?php echo $this->countrytraining; ?></span>
+					</div> 
+				<?php endif; ?>
+			</div>			
+			
+			
 			<?php if($this->website!=''): ?>
 				<div class="website">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['website']); ?></span>
@@ -60,4 +104,3 @@
 			<?php endif; ?>
 		<?php endif; ?>
 	<?php endif; ?>
-</div>

@@ -108,7 +108,13 @@ $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['location']   = 'Stadi
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['street']   = 'Stra&szlig;e :';
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['zip']   = 'Postleitzahl :';
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['city']   = 'Stadt :';
-$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['region']   = 'Region :';
+$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['country']   = 'Land :';
+$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['locationtraining']   = 'Trainingsgel&auml;nde :';
+$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['streettraining']   = 'Stra&szlig;e :';
+$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['ziptraining']   = 'Postleitzahl :';
+$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['citytraining']   = 'Stadt :';
+$GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['countrytraining']   = 'Land :';
+
 
 $GLOBALS['TL_LANG']['league-manager']['playerreader_basic']['name']   = 'Spieler:';
 $GLOBALS['TL_LANG']['league-manager']['playerreader_basic']['nickname']   = 'Spitzname:';

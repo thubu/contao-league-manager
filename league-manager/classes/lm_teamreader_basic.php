@@ -63,6 +63,14 @@ class lm_teamreader_basic extends ContentElement
 		{
 			$contests=array();
 			$objteam =$this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($teamid);
+
+			if (!is_numeric($objteam->logo))
+			{
+			    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+			}
+				$objFile = \FilesModel::findByPk($objteam->logo);
+			$objteam->logo=$objFile->path;
+
 			if ($objteam->numRows>0){
 				$this->Template->team_found=1;
 				$this->Template->id=$objteam->id;
@@ -89,10 +97,15 @@ class lm_teamreader_basic extends ContentElement
 				$this->Template->street=$objteam->street;
 				$this->Template->zip=$objteam->zip;
 				$this->Template->city=$objteam->city;
-				$this->Template->region=$objteam->region;
+				$this->Template->country=$objteam->country;
+				$this->Template->locationtraining=$objteam->locationtraining;
+				$this->Template->streettraining=$objteam->streettraining;
+				$this->Template->ziptraining=$objteam->ziptraining;
+				$this->Template->citytraining=$objteam->citytraining;
+				$this->Template->countrytraining=$objteam->countrytraining;
 				if($this->lm_showlogo==1)
 				{
-					$this->Template->logo=$objteam->logo;
+					$this->Template->logo=$objFile->path;
 				}
 				else
 				{

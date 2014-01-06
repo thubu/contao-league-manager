@@ -83,7 +83,7 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('hasinternal_page'),
-		'default'                     => 'name,shortname,sortstring;{team_location},location,street,zip,city,region;{add_info},ownteam,website,hasinternal_page,logo'
+		'default'                     => 'name,shortname,sortstring;{team_location},location,street,zip,city,country;{team_training},locationtraining,streettraining,ziptraining,citytraining,countrytraining;{add_info},ownteam,website,hasinternal_page,logo'
 	),
 
 	// Subpalettes
@@ -123,14 +123,14 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['location'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
 		'street' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['street'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
 		'zip' => array
 		(
@@ -146,12 +146,47 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>30, 'tl_class'=>'w50')
 		),
-		'region' => array
+		'country' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['region'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['country'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>30, 'tl_class'=>'w50')
+		),
+		'locationtraining' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['locationtraining'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'streettraining' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['streettraining'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'ziptraining' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['ziptraining'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+		'citytraining' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['citytraining'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>30, 'tl_class'=>'w50')
+		),
+		'countrytraining' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['countrytraining'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>30, 'tl_class'=>'w50')
 		),
 		'website' => array
 		(
