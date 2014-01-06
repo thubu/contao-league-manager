@@ -109,7 +109,7 @@
 							}
 							break;
 						case 'name':
-							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['teamname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
+							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['shortname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
 							break;
 						case 'matches':
 							?><td class="matches"><?php echo $team['matches']; ?></td><?php

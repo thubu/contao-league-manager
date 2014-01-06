@@ -272,25 +272,25 @@ class lm_contestreader_hometable_short extends ContentElement
 
 
 			//Generate table and sort entries
-			$arrTable=array();
+			$arrTable_HS=array();
 			$i=0;
 			foreach($arrTeams as $team){
 				$i++;
-				$arrTable[$i]=$team;
+				$arrTable_HS[$i]=$team;
 			}
-			for($i=1;$i<count($arrTable);$i++){
-				for($j=$i+1;$j<=count($arrTable);$j++){
-					if($arrTable[$j]['pointstotal']>$arrTable[$i]['pointstotal']){
-						swap($arrTable,$j,$i);
+			for($i=1;$i<count($arrTable_HS);$i++){
+				for($j=$i+1;$j<=count($arrTable_HS);$j++){
+					if($arrTable_HS[$j]['pointstotal']>$arrTable_HS[$i]['pointstotal']){
+						swap($arrTable_HS,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$j]['resdiff']>$arrTable[$i]['resdiff'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_HS[$i]['pointstotal']==$arrTable_HS[$j]['pointstotal'])&&($arrTable_HS[$j]['resdiff']>$arrTable_HS[$i]['resdiff'])){
+						swap($arrTable_HS,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$i]['resdiff']==$arrTable[$j]['resdiff'])&&($arrTable[$j]['resplus']>$arrTable[$i]['resplus'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_HS[$i]['pointstotal']==$arrTable_HS[$j]['pointstotal'])&&($arrTable_HS[$i]['resdiff']==$arrTable_HS[$j]['resdiff'])&&($arrTable_HS[$j]['resplus']>$arrTable_HS[$i]['resplus'])){
+						swap($arrTable_HS,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$i]['resdiff']==$arrTable[$j]['resdiff'])&&($arrTable[$i]['resplus']==$arrTable[$j]['resplus'])&&($arrTable[$j]['name']<$arrTable[$i]['name'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_HS[$i]['pointstotal']==$arrTable_HS[$j]['pointstotal'])&&($arrTable_HS[$i]['resdiff']==$arrTable_HS[$j]['resdiff'])&&($arrTable_HS[$i]['resplus']==$arrTable_HS[$j]['resplus'])&&($arrTable_HS[$j]['name']<$arrTable_HS[$i]['name'])){
+						swap($arrTable_HS,$j,$i);
 					}
 					else{
 					}
@@ -312,7 +312,7 @@ class lm_contestreader_hometable_short extends ContentElement
 			{
 				$this->Template->round_end='';
 			}
-			$this->Template->teams=$arrTable;
+			$this->Template->teams=$arrTable_HS;
 			$this->Template->rounds=$arrRounds;
 			$this->Template->round_count=$objAllRounds->numRows;
 			$this->Template->formurl=$this->Environment->url . $this->Environment->path . "/" . $this->Environment->request;
@@ -324,9 +324,9 @@ class lm_contestreader_hometable_short extends ContentElement
 	}
 }
 /**
-function swap(&$arr,$a,$b){
-	$temp=$arr[$a];
-	$arr[$a]=$arr[$b];
-	$arr[$b]=$temp;
+function swap(&$arr_HS,$a_HS,$b_HS){
+	$temp=$arr_HS[$a_HS];
+	$arr_HS[$a_HS]=$arr_HS[$b_HS];
+	$arr_HS[$b_HS]=$temp;
 }
 */

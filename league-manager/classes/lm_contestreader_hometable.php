@@ -272,25 +272,25 @@ class lm_contestreader_hometable extends ContentElement
 
 
 			//Generate table and sort entries
-			$arrTable=array();
+			$arrTable_H=array();
 			$i=0;
 			foreach($arrTeams as $team){
 				$i++;
-				$arrTable[$i]=$team;
+				$arrTable_H[$i]=$team;
 			}
-			for($i=1;$i<count($arrTable);$i++){
-				for($j=$i+1;$j<=count($arrTable);$j++){
-					if($arrTable[$j]['pointstotal']>$arrTable[$i]['pointstotal']){
-						swap($arrTable,$j,$i);
+			for($i=1;$i<count($arrTable_H);$i++){
+				for($j=$i+1;$j<=count($arrTable_H);$j++){
+					if($arrTable_H[$j]['pointstotal']>$arrTable_H[$i]['pointstotal']){
+						swap($arrTable_H,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$j]['resdiff']>$arrTable[$i]['resdiff'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_H[$i]['pointstotal']==$arrTable_H[$j]['pointstotal'])&&($arrTable_H[$j]['resdiff']>$arrTable_H[$i]['resdiff'])){
+						swap($arrTable_H,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$i]['resdiff']==$arrTable[$j]['resdiff'])&&($arrTable[$j]['resplus']>$arrTable[$i]['resplus'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_H[$i]['pointstotal']==$arrTable_H[$j]['pointstotal'])&&($arrTable_H[$i]['resdiff']==$arrTable_H[$j]['resdiff'])&&($arrTable_H[$j]['resplus']>$arrTable_H[$i]['resplus'])){
+						swap($arrTable_H,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$i]['resdiff']==$arrTable[$j]['resdiff'])&&($arrTable[$i]['resplus']==$arrTable[$j]['resplus'])&&($arrTable[$j]['name']<$arrTable[$i]['name'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_H[$i]['pointstotal']==$arrTable_H[$j]['pointstotal'])&&($arrTable_H[$i]['resdiff']==$arrTable_H[$j]['resdiff'])&&($arrTable_H[$i]['resplus']==$arrTable_H[$j]['resplus'])&&($arrTable_H[$j]['name']<$arrTable_H[$i]['name'])){
+						swap($arrTable_H,$j,$i);
 					}
 					else{
 					}
@@ -312,7 +312,7 @@ class lm_contestreader_hometable extends ContentElement
 			{
 				$this->Template->round_end='';
 			}
-			$this->Template->teams=$arrTable;
+			$this->Template->teams=$arrTable_H;
 			$this->Template->rounds=$arrRounds;
 			$this->Template->round_count=$objAllRounds->numRows;
 			$this->Template->formurl=$this->Environment->url . $this->Environment->path . "/" . $this->Environment->request;
@@ -324,9 +324,9 @@ class lm_contestreader_hometable extends ContentElement
 	}
 }
 /**
-function swap(&$arr,$a,$b){
-	$temp=$arr[$a];
-	$arr[$a]=$arr[$b];
-	$arr[$b]=$temp;
+function swap(&$arr_H,$a_H,$b_H){
+	$temp=$arr_H[$a_H];
+	$arr_H[$a_H]=$arr_H[$b_H];
+	$arr_H[$b_H]=$temp;
 }
 */

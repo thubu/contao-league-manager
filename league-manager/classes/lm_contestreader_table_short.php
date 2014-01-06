@@ -31,7 +31,7 @@ class lm_contestreader_table_short extends ContentElement
 	{
 		if (TL_MODE == 'BE')
 		{
-			$return = "Contest reader - table_short<br />";
+			$return = "Contest reader - table_shortname<br />";
 			if($this->lm_usefixedcontest=="1"){
 				$objContest =$this->Database->prepare("SELECT * FROM tl_lm_contests WHERE id=?")->execute($this->lm_contest);
 				$return.="Fixed contest: " . $objContest->name;
@@ -140,7 +140,8 @@ class lm_contestreader_table_short extends ContentElement
 
 				$arrTeams[$teams->team]=array(
 				'id'=>$objTeam->id,
-				'teamname'=>$objTeam->shortname,
+				'teamname'=>$objTeam->name,
+				'shortname'=>$objTeam->shortname,
 				'matches'=>0,
 				'win'=>0,
 				'draw'=>0,
@@ -274,25 +275,25 @@ class lm_contestreader_table_short extends ContentElement
 
 
 			//Generate table and sort entries
-			$arrTable=array();
+			$arrTable_TS=array();
 			$i=0;
 			foreach($arrTeams as $team){
 				$i++;
-				$arrTable[$i]=$team;
+				$arrTable_TS[$i]=$team;
 			}
-			for($i=1;$i<count($arrTable);$i++){
-				for($j=$i+1;$j<=count($arrTable);$j++){
-					if($arrTable[$j]['pointstotal']>$arrTable[$i]['pointstotal']){
-						swap($arrTable,$j,$i);
+			for($i=1;$i<count($arrTable_TS);$i++){
+				for($j=$i+1;$j<=count($arrTable_TS);$j++){
+					if($arrTable_TS[$j]['pointstotal']>$arrTable_TS[$i]['pointstotal']){
+						swap($arrTable_TS,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$j]['resdiff']>$arrTable[$i]['resdiff'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_TS[$i]['pointstotal']==$arrTable_TS[$j]['pointstotal'])&&($arrTable_TS[$j]['resdiff']>$arrTable_TS[$i]['resdiff'])){
+						swap($arrTable_TS,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$i]['resdiff']==$arrTable[$j]['resdiff'])&&($arrTable[$j]['resplus']>$arrTable[$i]['resplus'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_TS[$i]['pointstotal']==$arrTable_TS[$j]['pointstotal'])&&($arrTable_TS[$i]['resdiff']==$arrTable_TS[$j]['resdiff'])&&($arrTable_TS[$j]['resplus']>$arrTable_TS[$i]['resplus'])){
+						swap($arrTable_TS,$j,$i);
 					}
-					elseif(($arrTable[$i]['pointstotal']==$arrTable[$j]['pointstotal'])&&($arrTable[$i]['resdiff']==$arrTable[$j]['resdiff'])&&($arrTable[$i]['resplus']==$arrTable[$j]['resplus'])&&($arrTable[$j]['name']<$arrTable[$i]['name'])){
-						swap($arrTable,$j,$i);
+					elseif(($arrTable_TS[$i]['pointstotal']==$arrTable_TS[$j]['pointstotal'])&&($arrTable_TS[$i]['resdiff']==$arrTable_TS[$j]['resdiff'])&&($arrTable_TS[$i]['resplus']==$arrTable_TS[$j]['resplus'])&&($arrTable_TS[$j]['name']<$arrTable_TS[$i]['name'])){
+						swap($arrTable_TS,$j,$i);
 					}
 					else{
 					}
@@ -314,7 +315,7 @@ class lm_contestreader_table_short extends ContentElement
 			{
 				$this->Template->round_end='';
 			}
-			$this->Template->teams=$arrTable;
+			$this->Template->teams=$arrTable_TS;
 			$this->Template->rounds=$arrRounds;
 			$this->Template->round_count=$objAllRounds->numRows;
 			$this->Template->formurl=$this->Environment->url . $this->Environment->path . "/" . $this->Environment->request;
@@ -325,10 +326,10 @@ class lm_contestreader_table_short extends ContentElement
 		}//if($contestid)
 	}
 }
-/**
-function swap(&$arr,$a,$b){
-	$temp=$arr[$a];
-	$arr[$a]=$arr[$b];
-	$arr[$b]=$temp;
+
+function swap_TS(&$arr_TS,$a_TS,$b_TS){
+	$temp=$arr_TS[$a_TS];
+	$arr_TS[$a_TS]=$arr_TS[$b_TS];
+	$arr_TS[$b_TS]=$temp;
 }
-*/
+
