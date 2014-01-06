@@ -99,7 +99,7 @@
 			<?php if($this->website!=''): ?>
 				<div class="website">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['website']); ?></span>
-					<span class="value"><a href="<?php echo $this->website; ?>"<?php if($this->se_friendly==1): ?> itemprop="url"<?php endif; ?>><?php echo $this->website; ?></a></span>
+					<span class="value"><a href="<?php echo $this->website; ?>"<?php if($this->se_friendly==1): ?> itemprop="url"<?php endif; ?>target="_blank"><?php echo $this->name; ?></a></span>
 				</div>
 			<?php endif; ?>
 		<?php endif; ?>

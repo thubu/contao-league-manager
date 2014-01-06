@@ -134,7 +134,7 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['shortname'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'rgxp'=>'alnum', 'unique'=>true,)
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>25, 'rgxp'=>'alnum', 'unique'=>true,)
 		),
 		'sortstring' => array
 		(
@@ -249,21 +249,30 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 
 class tl_lm_contests extends Backend
 {
-	public function getTeams()
+	public function getTeams($dc)
 	{
-		$objTeams = $this->Database->prepare("SELECT id, name FROM tl_lm_teams ORDER BY name ASC")->execute();
-
-		if ($objTeams->numRows < 1)
-		{
-			return array();
-		}
-
 		$return = array();
+			$objTeams = $this->Database->prepare("SELECT tl_lm_teams.id as id, tl_lm_teams.name as name, tl_lm_teams.sortstring as sortstring FROM tl_lm_teams ORDER BY name ASC")->execute($objParentContest->id);
 
-		while ($objTeams->next())
-		{
-			$return[$objTeams->id] = $objTeams->name;
-		}
+			if ($objTeams->numRows < 1)
+			{
+				return array();
+			}
+
+
+
+			while ($objTeams->next())
+			{
+				if($objTeams->sortstring=="")
+				{
+					$return[$GLOBALS['TL_LANG']['league-manager']['misc']['nosortstring']][$objTeams->id] = $objTeams->name;
+				}
+				else
+				{
+					$return[$objTeams->sortstring][$objTeams->id] = $objTeams->name;
+				}
+
+			}
 
 		return $return;
 	}

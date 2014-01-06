@@ -187,7 +187,7 @@ $GLOBALS['TL_DCA']['tl_lm_clubs'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_clubs']['founded'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'rgxp'=>'date', 'datepicker'=>$this->getDatePickerString(), 'tl_class'=>'w50')
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'tl_class'=>'w50')
 		),
 		'logo' => array
 		(

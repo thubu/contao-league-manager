@@ -102,7 +102,7 @@ $GLOBALS['TL_DCA']['tl_lm_matches'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('different_points','venue'),
-		'default'                     => '{assignment},contest,pid,group;{datetime},startdate,starttime,enddate,endtime;{add_information},picture,website;{home},team_home,score_home,halftimescore_home;{away},team_away,score_away,halftimescore_away;{matchlocation},venue;{points},different_points;{confirmed},result_confirmed'
+		'default'                     => '{assignment},contest,pid,group;{datetime},startdate,starttime,enddate,endtime;{add_information},picture,website;{home},team_home;{homeresult},score_home,halftimescore_home;{away},team_away;{awayresult},score_away,halftimescore_away;{matchlocation},venue;{points},different_points;{confirmed},result_confirmed'
 	),
 
 	// Subpalettes

@@ -20,12 +20,14 @@ $GLOBALS['TL_LANG']['tl_lm_matches']['endtime'] = array('Endzeit', 'Uhrzeit des 
 
 
 $GLOBALS['TL_LANG']['tl_lm_matches']['home'] = 'Heimmannschaft';
+$GLOBALS['TL_LANG']['tl_lm_matches']['homeresult'] = 'Ergebnis Heimmannschaft';
 $GLOBALS['TL_LANG']['tl_lm_matches']['team_home'] = array('Heimmannschaft', 'Name der Heimmannschaft');
 $GLOBALS['TL_LANG']['tl_lm_matches']['score_home'] = array('Endergebnis Heimmannschaft', 'Endergebnis Heimmannschaft');
 $GLOBALS['TL_LANG']['tl_lm_matches']['halftimescore_home'] = array('Halbzeitergebnis Heimmannschaft', 'Tore 1.Halbzeit Heimmannschaft');
 
 
 $GLOBALS['TL_LANG']['tl_lm_matches']['away'] = 'Ausw&auml;rtsmannschaft';
+$GLOBALS['TL_LANG']['tl_lm_matches']['awayresult'] = 'Ergebnis Ausw&auml;rtsmannschaft';
 $GLOBALS['TL_LANG']['tl_lm_matches']['team_away'] = array('Ausw&auml;rtsmannschaft', 'Name der Heimmannschaft');
 $GLOBALS['TL_LANG']['tl_lm_matches']['score_away'] = array('Endergebnis Ausw&auml;rtsmannschaft', 'Endergebnis Ausw&auml;rtsmannschaft');
 $GLOBALS['TL_LANG']['tl_lm_matches']['halftimescore_away'] = array('Halbzeitergebnis Ausw&auml;rtsmannschaft', 'Tore 1.Halbzeit Ausw&auml;rtsmannschaft');
@@ -39,8 +41,8 @@ $GLOBALS['TL_LANG']['tl_lm_matches']['points_away'] = array('Straf-Punkte Gastma
 $GLOBALS['TL_LANG']['tl_lm_matches']['confirmed'] = 'Ergebnis best&auml;tigt';
 $GLOBALS['TL_LANG']['tl_lm_matches']['result_confirmed'] = array('Ergebnis best&auml;tigt', 'Ausw&auml;hlen, wenn das Ergebnis offiziell best&auml;tigt wurde');
 
-$GLOBALS['TL_LANG']['tl_lm_matches']['matchlocation'] = 'Austragungsort';
-$GLOBALS['TL_LANG']['tl_lm_matches']['venue'] = array('Ort', 'Definiert den Austragungsort des Matches');
+$GLOBALS['TL_LANG']['tl_lm_matches']['matchlocation'] = 'Stadion';
+$GLOBALS['TL_LANG']['tl_lm_matches']['venue'] = array('Ort', 'Stadion des Matches');
 $GLOBALS['TL_LANG']['tl_lm_matches']['location'] = array('Stadion', 'Stadion, in dem das Spiel statt findet');
 $GLOBALS['TL_LANG']['tl_lm_matches']['street'] = array('Stra&szlig;e', 'Stra&szlig;e des Stadions');
 $GLOBALS['TL_LANG']['tl_lm_matches']['zip'] = array('Postleitzahl', 'Postleitzahl des Stadions');
@@ -53,9 +55,9 @@ $GLOBALS['TL_LANG']['tl_lm_matches']['website'] = array('Webseite', 'Externe Web
 /**
  * Reference
  */
-$GLOBALS['TL_LANG']['tl_lm_matches']['venue']['reference']['H']='Adresse der Heimmannschaft';
-$GLOBALS['TL_LANG']['tl_lm_matches']['venue']['reference']['A']='Adresse der Ausw&auml;rtsmannschaft';
-$GLOBALS['TL_LANG']['tl_lm_matches']['venue']['reference']['O']='Andere Adresse';
+$GLOBALS['TL_LANG']['tl_lm_matches']['venue']['reference']['H']='Stadion Heimmannschaft';
+$GLOBALS['TL_LANG']['tl_lm_matches']['venue']['reference']['A']='Stadion Ausw&auml;rtsmannschaft';
+$GLOBALS['TL_LANG']['tl_lm_matches']['venue']['reference']['O']='Anderes Stadion';
 
 
 /**

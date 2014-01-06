@@ -30,6 +30,12 @@
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['shortname']); ?></span>
 					<span class="value"><?php echo $this->shortname; ?></span>
 				</div>
+				<?php if($this->founded!=''): ?>
+				<div class="founded">
+					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['founded']); ?></span>
+					<span class="value"><?php echo $this->founded; ?></span>
+				</div> 	
+				<?php endif; ?>
 			</div>
 			
 			<div class="adress"<?php if($this->se_friendly==1): ?> itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"<?php endif; ?>>
@@ -81,7 +87,7 @@
 				<?php if($this->website!=''): ?>
 				<div class="website">
 					<span name="label"><?php echo($GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['website']); ?></span>
-					<span class="value"><a href="<?php echo $this->website; ?>"<?php if($this->se_friendly==1): ?> itemprop="url"<?php endif; ?>><?php echo $this->website; ?></a></span>
+					<span class="value"><a href="<?php echo $this->website; ?>"<?php if($this->se_friendly==1): ?> itemprop="url"<?php endif; ?>target="_blank"><?php echo $this->name; ?></a></span>
 				</div>
 				<?php endif; ?>
 		<?php endif; ?>

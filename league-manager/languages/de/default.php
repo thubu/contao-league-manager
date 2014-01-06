@@ -89,16 +89,6 @@ $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['modus']   = 'Spiel
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['type_league']   = 'Liga';
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['type_tournament']   = 'Turnier';
 
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['name']   = 'Verein :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['shortname']   = 'Kurzname :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['street']   = 'Stra&szlig;e :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['zip']   = 'Postleitzahl :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['city']   = 'Stadt :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['country']   = 'Land :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['website']   = 'Homepage :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['phone']   = 'Telefon-Nr. :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['fax']   = 'Fax-Nr. :';
-$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['mail']   = 'E-Mail :';
 
 
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['name']   = 'Mannschaft :';
@@ -115,6 +105,17 @@ $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['ziptraining']   = 'Po
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['citytraining']   = 'Stadt :';
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['countrytraining']   = 'Land :';
 
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['name']   = 'Verein :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['shortname']   = 'Kurzname :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['street']   = 'Stra&szlig;e :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['zip']   = 'Postleitzahl :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['city']   = 'Stadt :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['country']   = 'Land :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['website']   = 'Homepage :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['phone']   = 'Telefon-Nr. :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['fax']   = 'Fax-Nr. :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['mail']   = 'E-Mail :';
+$GLOBALS['TL_LANG']['league-manager']['clubreader_basic']['founded']   = 'Gegr&uuml;ndet :';
 
 $GLOBALS['TL_LANG']['league-manager']['playerreader_basic']['name']   = 'Spieler:';
 $GLOBALS['TL_LANG']['league-manager']['playerreader_basic']['nickname']   = 'Spitzname:';

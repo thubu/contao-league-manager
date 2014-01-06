@@ -104,6 +104,7 @@ class lm_clubreader_basic extends ContentElement
 				$this->Template->phone=$objclub->phone;
 				$this->Template->fax=$objclub->fax;
 				$this->Template->mail=$objclub->mail;
+				$this->Template->founded=$objclub->founded;
 				if($this->lm_showlogo==1)
 				{
 					$this->Template->logo=$objFile->path;
