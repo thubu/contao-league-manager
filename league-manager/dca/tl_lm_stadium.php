@@ -20,7 +20,7 @@ $GLOBALS['TL_DCA']['tl_lm_stadium'] = array
 	'config' => array
 	(
 		'dataContainer'               => 'Table',
-		'enableVersioning'            => true,
+		'enableVersioning'            => true
 	),
 
 	// List
@@ -76,9 +76,9 @@ $GLOBALS['TL_DCA']['tl_lm_stadium'] = array
 				'href'                => 'act=show',
 				'icon'                => 'show.gif'
 			),
-			'assignstadium' => array
+			'assignteams' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_lm_stadium']['assignstadium'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_lm_stadium']['assignteams'],
 				'href'                => 'table=tl_lm_teams_to_stadium',
 				'icon'                => 'edit.gif',
 				'attributes'          => 'class="contextmenu"'

@@ -229,10 +229,11 @@ CREATE TABLE `tl_lm_clubs` (
   `fax` varchar(255) NULL default '',
   `mail` varchar(255) NULL default '',
   `website` varchar(255) NULL default '',
-  `internal_page` int(10) NOT NULL default '0',
   `logo` varchar(255) NULL default '',
   `ownclub` char(1) NOT NULL default '',
   `founded` varchar(255) NULL default '',
+  `hasinternal_page` char(1) NOT NULL default '',
+  `internal_page` int(10) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM default CHARSET=utf8;
