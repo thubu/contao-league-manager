@@ -20,8 +20,7 @@ $GLOBALS['TL_DCA']['tl_lm_players'] = array
 	'config' => array
 	(
 		'dataContainer'               => 'Table',
-		'enableVersioning'            => true,
-		'ctable'                      => array('tl_lm_players_to_team')
+		'enableVersioning'            => true
 	),
 
 	// List

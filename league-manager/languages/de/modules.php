@@ -14,6 +14,7 @@
  * Back end modules
  */
 $GLOBALS['TL_LANG']['MOD']['league-manager'] = 'Liga Manager';
+$GLOBALS['TL_LANG']['MOD']['tl_lm_stadium'] = array('Spielst&auml;tten', 'Spielst&auml;tten und Stadien verwalten');
 $GLOBALS['TL_LANG']['MOD']['tl_lm_clubs'] = array('Vereine', 'Vereine, die Mannschaften und teilnehmende Spieler verwalten');
 $GLOBALS['TL_LANG']['MOD']['tl_lm_contests'] = array('Wettbewerbe', 'Ligen und Turniere mit Runden und Matches verwalten');
 $GLOBALS['TL_LANG']['MOD']['tl_lm_teams'] = array('Mannschaften', 'Mannschaften und deren Spieler verwalten');

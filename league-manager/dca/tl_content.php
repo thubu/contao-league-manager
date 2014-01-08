@@ -35,17 +35,19 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirect
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectteam';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectclub';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectcontest';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_useredirectstadium';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedteam';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedclub';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedcontest';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedmatch';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedplayer';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_usefixedstadium';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_player';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_team';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_club';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_match';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_contest';
-
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'lm_linktype_stadium';
 
 
 
@@ -81,11 +83,13 @@ $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectteam'] = 'lm_redi
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectclub'] = 'lm_redirectclub';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectmatch'] = 'lm_redirectmatch';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectcontest'] = 'lm_redirectcontest';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_useredirectstadium'] = 'lm_redirectstadium';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedcontest'] = 'lm_contest';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedclub'] = 'lm_club';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedteam'] = 'lm_team';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedmatch'] = 'lm_match';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedplayer'] = 'lm_player';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_usefixedstadium'] = 'lm_stadium';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_player_NOL']='';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_player_INT']='lm_link_player_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_player_EXT']='lm_link_player_new_window';
@@ -106,6 +110,12 @@ $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_contest_NOL']='';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_contest_INT']='lm_link_contest_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_contest_EXT']='lm_link_contest_new_window';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_contest_FIX']='lm_redirectcontest,lm_link_contest_new_window';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_stadium_NOL']='';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_stadium_INT']='lm_link_stadium_new_window';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_stadium_EXT']='lm_link_stadium_new_window';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['lm_linktype_stadium_FIX']='lm_redirectstadium,lm_link_stadium_new_window';
+
+
 /**
  * Add fields
  */
@@ -140,6 +150,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_club'] = array
 	'eval'                    => array('mandatory'=>true),
 	'options_callback'        => array('tl_content_lm', 'getClubs')
 );
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_stadium'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_stadium'],
+	'exclude'                 => false,
+	'inputType'               => 'select',
+	'eval'                    => array('mandatory'=>true),
+	'options_callback'        => array('tl_content_lm', 'getStadium')
+);
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectplayer'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_redirectplayer'],
@@ -171,6 +189,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectmatch'] = array
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectcontest'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_redirectcontest'],
+	'exclude'                 => false,
+	'inputType'               => 'pageTree',
+	'eval'                    => array('mandatory'=>true,'fieldType'=>'radio', 'tl_class'=>'clr')
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_redirectstadium'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_redirectstadium'],
 	'exclude'                 => false,
 	'inputType'               => 'pageTree',
 	'eval'                    => array('mandatory'=>true,'fieldType'=>'radio', 'tl_class'=>'clr')
@@ -210,6 +235,15 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_useredirectcontest'] = array
 	'inputType'               => 'checkbox',
 	'eval'                    => array('submitOnChange'=>true)
 );
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_useredirectstadium'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_useredirectstadium'],
+	'exclude'                 => false,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('submitOnChange'=>true)
+);
+
+
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_template'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_template'],
@@ -278,6 +312,21 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_player'] = array
 	'inputType'               => 'select',
 	'eval'                    => array('mandatory'=>true),
 	'options_callback'        => array('tl_content_lm', 'getPlayers')
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_usefixedstadium'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_usefixedstadium'],
+	'exclude'                 => false,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('submitOnChange'=>true)
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_stadium'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_stadium'],
+	'exclude'                 => false,
+	'inputType'               => 'select',
+	'eval'                    => array('mandatory'=>true),
+	'options_callback'        => array('tl_content_lm', 'getStadium')
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_se_friendly'] = array
 (
@@ -354,6 +403,15 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_linktype_contest'] = array
 	'options'				  => array('NOL','FIX','INT','EXT'),
 	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['lm_linktypes']['reference']
 );
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_linktype_stadium'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_linktype_stadium'],
+	'exclude'                 => false,
+	'inputType'               => 'select',
+	'eval'                    => array('mandatory'=>true,'submitOnChange'=>true),
+	'options'				  => array('NOL','FIX','INT','EXT'),
+	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['lm_linktypes']['reference']
+);
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_player_new_window'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_link_new_window'],
@@ -383,6 +441,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_match_new_window'] = array
 	'eval'                    => array()
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_contest_new_window'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_link_new_window'],
+	'exclude'                 => false,
+	'inputType'               => 'checkbox',
+	'eval'                    => array()
+);
+$GLOBALS['TL_DCA']['tl_content']['fields']['lm_link_stadium_new_window'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['lm_link_new_window'],
 	'exclude'                 => false,
@@ -444,7 +509,7 @@ class tl_content_lm extends Backend
 
 		return $return;
 	}
-	//Lists the teams in the database
+	//Lists the matches in the database
 	public function getMatches()
 	{
 		$return=array();
@@ -519,6 +584,33 @@ class tl_content_lm extends Backend
 				else
 				{
 					$return[$objClubs->sortstring][$objClubs->id] = $objClubs->name;
+				}
+			}
+
+			return $return;
+		}
+
+		//Lists the stadium in the database
+		public function getStadium()
+		{
+			$objStadium = $this->Database->prepare("SELECT id, name, sortstring FROM tl_lm_stadium ORDER BY name ASC")->execute();
+
+			if ($objStadium->numRows < 1)
+			{
+				return array();
+			}
+
+			$return = array();
+
+			while ($objStadium->next())
+			{
+				if($objStadium->sortstring=="")
+				{
+					$return[$GLOBALS['TL_LANG']['league-manager']['misc']['nosortstring']][$objStadium->id] = $objStadium->name;
+				}
+				else
+				{
+					$return[$objStadium->sortstring][$objStadium->id] = $objStadium->name;
 				}
 			}
 

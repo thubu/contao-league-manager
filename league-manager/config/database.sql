@@ -259,7 +259,6 @@ CREATE TABLE `tl_lm_stadium` (
   `fax` varchar(255) NULL default '',
   `mail` varchar(255) NULL default '',
   `website` varchar(255) NULL default '',
-  `internal_page` int(10) NOT NULL default '0',
   `logo` varchar(255) NULL default '',
   `buildyear` varchar(255) NULL default '',
   `capacity` varchar(255) NULL default '',
@@ -273,9 +272,29 @@ CREATE TABLE `tl_lm_stadium` (
   `subsoil` varchar(255) NULL default '',  
   `undersoilheating` varchar(255) NULL default '',
   `fieldsize` varchar(255) NULL default '',  
+  `hasinternal_page` char(1) NOT NULL default '',
+  `internal_page` int(10) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM default CHARSET=utf8;
+-- --------------------------------------------------------
+
+
+-- 
+-- Table `tl_lm_teams_to_stadium`
+-- 
+
+CREATE TABLE `tl_lm_teams_to_stadium` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `tstamp` int(10) unsigned NOT NULL default '0',
+  `pid` int(10) NOT NULL default '0',
+  `team` int(10) NULL default '0',
+  `date_from` varchar(10) NOT NULL default '',
+  `date_to` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`id`),
+  KEY `pid` (`pid`)
+) ENGINE=MyISAM default CHARSET=utf8;
+
 -- --------------------------------------------------------
 
 
@@ -351,7 +370,7 @@ CREATE TABLE `tl_lm_coach` (
   `nickname` varchar(255) NULL default '',
   `picture` varchar(255) NULL default '',
   `endofcareer` varchar(255) NULL default '',  
-  `addinfo` blob NULL,
+  `addinfo` blob NULL, 
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM default CHARSET=utf8;

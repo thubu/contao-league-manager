@@ -17,7 +17,16 @@
 */
  $GLOBALS['BE_MOD']['league-manager'] = array
  (
-
+ 	'tl_lm_stadium' => array
+	(
+		'tables' => array('tl_lm_stadium','tl_lm_teams_to_stadium'),
+		'icon'   => 'system/modules/league-manager/assets/images/club.png'
+	 ),
+	 'tl_lm_clubs' => array
+	 (
+	    'tables' => array('tl_lm_clubs','tl_lm_teams_to_club'),
+		'icon'   => 'system/modules/league-manager/assets/images/club.png'
+	 ),
 	 'tl_lm_teams' => array
 	 (
 	    'tables' => array('tl_lm_teams'),
@@ -27,11 +36,6 @@
 	 (
 	    'tables' => array('tl_lm_players','tl_lm_players_to_team'),
 		'icon'   => 'system/modules/league-manager/assets/images/player.png'
-	 ),
-	 'tl_lm_clubs' => array
-	 (
-	    'tables' => array('tl_lm_clubs','tl_lm_teams_to_club'),
-		'icon'   => 'system/modules/league-manager/assets/images/club.png'
 	 ),
 	 'tl_lm_contests' => array
 	 (

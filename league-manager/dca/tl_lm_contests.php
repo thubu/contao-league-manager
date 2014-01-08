@@ -228,21 +228,6 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 			'exclude'                 => false,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
-		),
-		'create_rounds' => array
-		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['create_rounds'],
-			'exclude'                 => false,
-			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit),
-			'save_callback' => array
-			(
-				array('tl_lm_contests', 'save_create_rounds')
-			),
-			'load_callback' => array
-			(
-				array('tl_lm_contests', 'load_create_rounds')
-			)
 		)
 	)
 );
