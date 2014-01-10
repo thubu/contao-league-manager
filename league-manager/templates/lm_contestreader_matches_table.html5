@@ -17,7 +17,7 @@
 					<tr class="round"><th colspan="8" class="info"><span class="roundname"><?php echo($this->rounds[$i]['roundname']); ?></span><span class="finalized"><?php if($this->rounds[$i]['dates_finalized']==1): ?> *<?php endif;?></span></th></tr>
 					<?php if(count($this->matches[$i])>0): ?>
 						<?php foreach($this->matches[$i] as $match): ?>
-							<tr class="match<?php if($match['home_own']==1||$match['away_own']==1): ?> own<?php endif; ?>">
+							<tr class="match">
 								<td class="startdate"><?php echo(date($GLOBALS['TL_CONFIG']['dateFormat'],$match['startdate'])); ?></td>
 								<td class="starttime"><?php echo(date($GLOBALS['TL_CONFIG']['timeFormat'],$match['starttime'])); ?></td>
 								<td class="hometeam<?php if($match['home_own']==1): ?> own<?php endif; ?>">
@@ -29,9 +29,11 @@
 									<?php if(($this->useredirectmatch==1)&&($match['redirect']!='')): ?><a href="<?php echo($match['redirect']); ?>"><?php endif; ?>
 									<?php echo $match['away']; ?>
 									<?php if(($this->useredirectmatch==1)&&($match['redirect']!='')): ?></a><?php endif; ?></td>
-								<td class="scorehome"><?php echo $match['homescore']; ?></td>
+								<td class="scorehome<?php if($match['home_own']==1): ?> own<?php endif; ?>">
+									<?php echo $match['homescore']; ?></td>
 								<td class="versus">:</td>
-								<td class="scoreaway"><?php echo $match['awayscore']; ?></span></td>
+								<td class="scoreaway<?php if($match['away_own']==1): ?> own<?php endif; ?>">
+									<?php echo $match['awayscore']; ?></span></td>
 							</tr>
 						<?php endforeach; ?>
 					<?php endif; ?>

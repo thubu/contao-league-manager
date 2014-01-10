@@ -33,6 +33,12 @@ CREATE TABLE `tl_lm_contests` (
   `date_start` varchar(10) NOT NULL default '',
   `date_end` varchar(10) NOT NULL default '',
   `create_rounds` int(10) NOT NULL default '0',
+  `place_decent` varchar(10) NOT NULL default '',  
+  `place_decentrelegation` varchar(10) NOT NULL default '',
+  `place_ascent` varchar(10) NOT NULL default '',
+  `place_ascentrelegation` varchar(10) NOT NULL default '',
+  `place_ascentadditional` varchar(10) NOT NULL default '',
+  `place_specialplace` varchar(10) NOT NULL default '',    
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM default CHARSET=utf8;
 
@@ -238,6 +244,26 @@ CREATE TABLE `tl_lm_clubs` (
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM default CHARSET=utf8;
 
+-- --------------------------------------------------------
+ 
+ 
+--
+-- Table `tl_lm_season`
+--
+ 
+CREATE TABLE `tl_lm_season` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `tstamp` int(10) unsigned NOT NULL default '0',
+  `pid` int(10) NOT NULL default '0',
+  `season` int(10) NULL default '0',
+  `sportstype` int(10) NULL default '0',
+  `hasinternal_page` char(1) NOT NULL default '',
+  `internal_page` int(10) NOT NULL default '0',
+  `logo` varchar(255) NULL default '',
+  PRIMARY KEY  (`id`),
+  KEY `pid` (`pid`)
+) ENGINE=MyISAM default CHARSET=utf8;
+ 
 -- --------------------------------------------------------
 
 

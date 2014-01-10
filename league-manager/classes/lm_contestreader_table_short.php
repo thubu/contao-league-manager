@@ -71,6 +71,7 @@ class lm_contestreader_table_short extends ContentElement
 				);
 			}
 			$objContest =$this->Database->prepare("SELECT * FROM tl_lm_contests WHERE id=?")->execute($this->lm_contest);
+			$objAscent =$this->Database->prepare("SELECT place_ascent,place_ascentrelegation,place_decent,place_decentrelegation,place_specialplace FROM tl_lm_contests WHERE id=?")->execute($this->lm_contest);
 			$objPenalties =$this->Database->prepare("SELECT team,sum(points) as penalty FROM tl_lm_contest_penalties WHERE pid=? GROUP BY team")->execute($this->lm_contest);
 			$arrPenalties=array();
 			while($objPenalties->next()){
@@ -157,7 +158,12 @@ class lm_contestreader_table_short extends ContentElement
 				'haspenalties'=>false,
 				'logo'=>$objFile->path,
 				'ownteam'=>$objTeam->ownteam,
-				'redirect'=>$redirect
+				'redirect'=>$redirect,
+				'ascent'=>$objAscent->place_ascent,
+				'ascentrelegation'=>$objAscent->place_ascentrelegation,
+				'decent'=>$objAscent->place_decent,
+				'decentrelegation'=>$objAscent->place_decentrelegation,
+				'specialplace'=>$objAscent->place_specialplace
 				);
 			}
 

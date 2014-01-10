@@ -11,7 +11,7 @@
 		<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
 	<?php endif; ?>
 	<?php if($this->hasContestid): ?>
-		<!-- <form action="<?php echo($this->formurl); ?>" method="get">
+<!-- 			<form action="<?php echo($this->formurl); ?>" method="get">
 			
 			<span class="select_round"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_from']); ?>
 			
@@ -36,18 +36,21 @@
 			<input type="submit" value="<?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_submit']); ?>">
 			<input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">
 			</span>
-		</form> -->
+		</form>
+-->		
 		
 		<table>
 			<thead>
 			<?php foreach($this->fields as $field): ?>
 				<?php
 					switch($field){
+						case 'special':
+							?><th class="Place"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Special']); ?></th><?php
+							break;
 					
 						case 'place':
 							?><th class="Place"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Place']); ?></th><?php
 							break;
-										
 						case 'logo':
 							?><th class="Logo"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Logo']); ?></th><?php
 							break;
@@ -100,6 +103,17 @@
 				<?php foreach($this->fields as $field): ?>
 				<?php
 					switch($field){
+					
+						case 'special':
+							?><td 
+							<?php if($team['ascent'] >=$i): {echo "class='ascent'";}
+								elseif($team['ascentrelegation'] ==$i): {echo "class='ascentrelegation'";}
+								elseif($team['decent'] <=$i): {echo "class='decent'";}
+								elseif($team['decentrelegation'] ==$i): {echo "class='decentrelegation'";}
+								elseif($team['specialplace']+$team['ascentrelegation'] >=$i): {echo "class='specialplace'";}
+								?><?php endif; ?></td><?php
+							break;
+					
 						case 'logo':
 							if (!$team['logo']==""){//add image tag if logo present only
 								?><td class="teamlogo"><img src="<?php echo $team['logo']; ?>" /></td><?php
@@ -111,14 +125,14 @@
 						case 'name':
 							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['teamname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
 							break;
+						case 'matches':
+							?><td class="matches"><?php echo $team['matches']; ?></td><?php
+							break;
 						
 						case 'place':
 							?><td class="place"><?php echo $i; ?></td><?php
 							break;
 						
-						case 'matches':
-							?><td class="matches"><?php echo $team['matches']; ?></td><?php
-							break;
 						case 'w':
 							?><td class="matcheswin"><?php echo $team['win']; ?></td><?php
 							break;
@@ -141,7 +155,7 @@
 							?><td class="pointsplus"><?php echo $team['pointsplus']; ?></td><?php
 							break;
 						case 'pm':
-							?><td class="pointsminus"><?php echo $team['pointsminus']; ?></td><?php
+							?><td class="pointsminus"><?php echo abs ($team['pointsminus']); ?></td><?php
 							break;
 						case 'pd':
 							?><td class="pointsdiff"><?php echo $team['pointsdiff']; ?></td><?php

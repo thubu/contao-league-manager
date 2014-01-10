@@ -29,6 +29,12 @@ $GLOBALS['TL_LANG']['tl_lm_contests']['draw_points_away']	= array ('Unentschiede
 $GLOBALS['TL_LANG']['tl_lm_contests']['away_wins_points_home']	= array ('Ausw&auml;rtssieg: Punkte Heimmannschaft', 'Punkte f&uuml;r die Heimmannschaft im Falle eines Ausw&auml;rtssieges');
 $GLOBALS['TL_LANG']['tl_lm_contests']['away_wins_points_away']	= array ('Ausw&auml;rtssieg:  Punkte Ausw&auml;rtsmannschaft', 'Punkte f&uuml;r die Ausw&auml;rtsmannschaft im Falle eines Ausw&auml;rtssieges');
 
+$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascent']	= array ('Aufstiegsplatz/CL-Platz', 'Aufstiegsplatz, CL-Platz festlegen. (3 = Platz 1 - 3 markieren)');
+$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascentrelegation']	= array ('Aufstiegsplatz-Relegation/CL-Platz-Quali ', 'Aufstiegsplatz f&uuml;r Relegation, CL-Platz Qualifikaton festlegen. (4 = Platz 4 markieren)');
+$GLOBALS['TL_LANG']['tl_lm_contests']['place_specialplace']	= array ('Spezieller-Relegation-Platz', 'Relegation f&uuml;r Euro-League usw., Spezieller-Relegation-Platz festlegen. (2 = Anzahl der Pl&auml;tze werden markiert)');
+$GLOBALS['TL_LANG']['tl_lm_contests']['place_decent']	= array ('Direkter Abstiegsplatz', 'Direkter Abstiegsplatz festlegen. (17 = Platz 17 und 18 markieren)');
+$GLOBALS['TL_LANG']['tl_lm_contests']['place_decentrelegation']	= array ('Abstiegsplatz-Relegation', 'Abstiegsplatz f&uuml;r Relegation festlegen. (16 = Platz 16 markieren)');
+
 
 $GLOBALS['TL_LANG']['tl_lm_contests']['create_rounds_header'] = 'Spieltage/Runden hinzuf&uuml;gen';
 $GLOBALS['TL_LANG']['tl_lm_contests']['create_rounds'] = array ('Spieltage/Runden hinzuf&uuml;gen', 'Anzahl der Spieltage/Runden, die Sie hinzuf&uuml;gen m&ouml;chten');

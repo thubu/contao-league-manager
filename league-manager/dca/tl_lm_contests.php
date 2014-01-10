@@ -109,7 +109,7 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array(''),
-		'default'                     => 'name,shortname,sortstring,mode,date_start,date_end,teams;{rules},home_wins_points_home,home_wins_points_away,draw_points_home,draw_points_away,away_wins_points_home,away_wins_points_away;{create_rounds_header},create_rounds;'
+		'default'                     => 'name,shortname,sortstring,mode,date_start,date_end,teams;{rules},home_wins_points_home,home_wins_points_away,draw_points_home,draw_points_away,away_wins_points_home,away_wins_points_away,place_ascent,place_ascentrelegation,place_decent,place_decentrelegation,place_specialplace;{create_rounds_header},create_rounds;'
 	),
 
 	// Subpalettes
@@ -228,7 +228,45 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 			'exclude'                 => false,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
-		)
+		),
+		'place_ascent' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascent'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+		'place_ascentrelegation' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascentrelegation'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+		'place_decent' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_decent'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+		'place_decentrelegation' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_decentrelegation'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+		'place_specialplace' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_specialplace'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+
+
+
 	)
 );
 
