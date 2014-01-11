@@ -98,6 +98,15 @@ class lm_contestreader_teams extends ContentElement
 				foreach($arrTeamsid as $teamid){
 					$i=$i+1;
 					$team = $this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($teamid);
+
+			if (!is_numeric($team->logo))
+			{
+			    return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+			}
+			$objFile = \FilesModel::findByPk($team->logo);
+			$team->logo=$objFile->path;
+
+
 					switch($this->lm_linktype_team)
 					{
 						case 'NOL':
@@ -149,6 +158,7 @@ class lm_contestreader_teams extends ContentElement
 					'shortname'=>$team->shortname,
 					'logo'=>$team->logo,
 					'redirect'=>$redirect,
+					'ownteam'=>$team->ownteam,
 					'class'=>(($team->ownteam == true) ? 'own ' : '') . (($i == 1) ? 'first ' : '') . (($i == count($arrTeamsid)) ? 'last ' : '') . ((($i % 2) == 0) ? 'odd' : 'even')
 					);
 				}

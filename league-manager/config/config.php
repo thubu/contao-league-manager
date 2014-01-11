@@ -70,7 +70,6 @@ $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_basic'] = 'lm_contestread
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_teams'] = 'lm_contestreader_teams';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_rounds'] = 'lm_contestreader_rounds';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_matches'] = 'lm_contestreader_matches';
-$GLOBALS['TL_CTE']['league-manager']['lm_contestreader_matches_lastmatch'] = 'lm_contestreader_matches_lastmatch';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_crosstable'] = 'lm_contestreader_crosstable';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_table'] = 'lm_contestreader_table';
 $GLOBALS['TL_CTE']['league-manager']['lm_contestreader_table_short'] = 'lm_contestreader_table_short';

@@ -109,7 +109,11 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array(''),
-		'default'                     => 'name,shortname,sortstring,mode,date_start,date_end,teams;{rules},home_wins_points_home,home_wins_points_away,draw_points_home,draw_points_away,away_wins_points_home,away_wins_points_away,place_ascent,place_ascentrelegation,place_decent,place_decentrelegation,place_specialplace;{create_rounds_header},create_rounds;'
+		'default'                     => 'name,shortname,sortstring,mode,date_start,date_end,teams;
+										{create_rounds_header},create_rounds;
+										{rules},home_wins_points_home,home_wins_points_away,draw_points_home,draw_points_away,away_wins_points_home,away_wins_points_away;
+										{place},place_ascent,place_ascent_comment,place_ascentrelegation,place_ascentrelegation_comment,place_decent,place_decent_comment,place_decentrelegation,place_decentrelegation_comment,place_specialplace,place_specialplace_comment;
+										{info},playingtime,playingperiods,halftimebreak,overtime,overtime_time,overtime_periods,overtime_break,overtime_comment,penalty_shootout;'
 	),
 
 	// Subpalettes
@@ -236,12 +240,26 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
 		),
+		'place_ascent_comment' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascent_comment'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
 		'place_ascentrelegation' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascentrelegation'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+		'place_ascentrelegation_comment' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_ascentrelegation_comment'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
 		),
 		'place_decent' => array
 		(
@@ -250,12 +268,27 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
 		),
+		'place_decent_comment' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_decent_comment'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
 		'place_decentrelegation' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_decentrelegation'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
+		),
+
+		'place_decentrelegation_comment' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_decentrelegation_comment'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
 		),
 		'place_specialplace' => array
 		(
@@ -264,9 +297,94 @@ $GLOBALS['TL_DCA']['tl_lm_contests'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit, 'tl_class'=>'w50')
 		),
+		'place_specialplace_comment' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['place_specialplace_comment'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
 
-
-
+		'playingtime' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['playingtime'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'playingperiods' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['playingperiods'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'halftimebreak' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['halftimebreak'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>'alnum')
+		),
+		'overtime' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['overtime'],
+			'exclude'                 => false,
+			'filter'				  => true,
+			'inputType'               => 'checkbox',
+			'eval'                    => array('mandatory'=>false)
+		),
+		'overtime_periods' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['overtime_periods'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'overtime_time' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['overtime_time'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'overtime_break' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['overtime_break'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'overtime_comment' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['overtime_comment'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp'=>'alnum', 'tl_class'=>'w50')
+		),
+		'penalty_shootout' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['penalty_shootout'],
+			'exclude'                 => false,
+			'filter'				  => true,
+			'inputType'               => 'checkbox',
+			'eval'                    => array('mandatory'=>false)
+		),
+		'create_rounds' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_contests']['create_rounds'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'rgxp'=>digit),
+			'save_callback' => array
+			(
+				array('tl_lm_contests', 'save_create_rounds')
+			),
+			'load_callback' => array
+			(
+				array('tl_lm_contests', 'load_create_rounds')
+			)
+		)
 	)
 );
 

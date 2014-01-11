@@ -12,7 +12,7 @@
 	<?php endif; ?>
 	<?php if($this->hasContestid): ?>
 		<table class="contestinformation">
-			<tr><th colspan="2" class="contestname"><class="name"><?php echo $this->contest; ?></th></tr>
+			<tr class="information"><th colspan="2"> <span class="contestname"><?php echo $this->contest; ?></span></th></tr>
 			<tr colspan="2" >
 				<td class="startdate"><?php echo $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['start']; ?> <?php echo $this->date_start; ?></td>
 				<td class="enddate"><?php echo $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['end']; ?> <?php echo $this->date_end; ?></td>
@@ -20,12 +20,13 @@
 		</table>
 		<table class="teams">
 			<?php foreach($this->teams as $team): ?>
-				<tr class="team <?php echo $team['class']; ?>
-					<td><class="logo"><?php if(($this->showlogo == 1) && ($team['logo']!='')): ?><div class="logo"><img src="./<?php echo $team['logo']; ?>" alt="<?php echo $team['name']; ?>/><?php endif; ?></td>
+				<tr class="<?php if(($i%2)==1): ?>even<?php else: ?>odd<?php endif; ?><?php if($team['ownteam']==1): ?> own<?php endif; ?>">
+					<td class="logo">
+								<td class="teamlogo"><img src="<?php echo $team['logo']; ?>" /></td>
+							
 					<td class="teamname">
 						<?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?>
 						<?php echo $team['name']; ?>
-						<?php if($team['redirect']!=''): ?></a><?php endif; ?>
 					</td>
 				</tr>
 			<?php endforeach; ?>

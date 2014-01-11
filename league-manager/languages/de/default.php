@@ -88,8 +88,16 @@ $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['end']   = 'Letzter
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['modus']   = 'Spielmodus :';
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['type_league']   = 'Liga';
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['type_tournament']   = 'Turnier';
-
-
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['info']   = 'Informationen zum Wettbewerb';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['playingperiods']   = 'Halbzeiten :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['halftimebreak']   = 'Halbzeitpause :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['playingtime']   = 'Spielzeit :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['overtime']   = 'Verl&auml;ngerung nach Unentschieden regul&auml;re Spielzeit.';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['overtime_time']   = 'Spielzeit Verl&auml;ngerung :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['overtime_break']   = 'Halbzeitpause Verl&auml;ngerung :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['overtime_periods']   = 'Halbzeiten Verl&auml;ngerung :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['overtime_comment']   = 'Verl&auml;ngerung Bemerkung :';
+$GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['penalty_shootout']   = 'Elfmeterschiessen nach Unentschieden Verl&auml;ngerung.';
 
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['name']   = 'Mannschaft :';
 $GLOBALS['TL_LANG']['league-manager']['teamreader_basic']['shortname']   = 'Kurzname :';

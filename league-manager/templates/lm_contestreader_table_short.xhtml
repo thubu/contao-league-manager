@@ -43,11 +43,12 @@
 			<?php foreach($this->fields as $field): ?>
 				<?php
 					switch($field){
-					
+						case 'special':
+							?><th class="Place"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Special']); ?></th><?php
+							break;
 						case 'place':
 							?><th class="Place"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Place']); ?></th><?php
 							break;
-					
 						case 'logo':
 							?><th class="Logo"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Logo']); ?></th><?php
 							break;
@@ -100,6 +101,17 @@
 				<?php foreach($this->fields as $field): ?>
 				<?php
 					switch($field){
+					
+						case 'special':
+							?><td 
+							<?php if($team['ascent'] >=$i): {echo "class='ascent'";}
+								elseif($team['ascentrelegation'] ==$i): {echo "class='ascentrelegation'";}
+								elseif($team['decent'] <=$i): {echo "class='decent'";}
+								elseif($team['decentrelegation'] ==$i): {echo "class='decentrelegation'";}
+								elseif($team['specialplace']+$team['ascentrelegation'] >=$i): {echo "class='specialplace'";}
+								?><?php endif; ?></td><?php
+							break;
+
 						case 'logo':
 							if (!$team['logo']==""){//add image tag if logo present only
 								?><td class="teamlogo"><img src="<?php echo $team['logo']; ?>" /></td><?php
@@ -109,7 +121,7 @@
 							}
 							break;
 						case 'name':
-							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['teamname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
+							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['shortname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
 							break;
 						case 'matches':
 							?><td class="matches"><?php echo $team['matches']; ?></td><?php
