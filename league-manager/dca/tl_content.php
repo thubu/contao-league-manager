@@ -57,11 +57,8 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_rounds'] = '{type
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_matches'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_useredirectmatch;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_crosstable'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_useredirectmatch;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_table'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_linktype_team;{lm_selectfields},lm_tablefields;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_table_short'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_linktype_team;{lm_selectfields},lm_tablefields;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_hometable'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_linktype_team;{lm_selectfields},lm_tablefields;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_hometable_short'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_linktype_team;{lm_selectfields},lm_tablefields;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_awaytable'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_linktype_team;{lm_selectfields},lm_tablefields;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_awaytable_short'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest;{lm_redirect},lm_linktype_team;{lm_selectfields},lm_tablefields;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_contestreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedcontest,lm_se_friendly;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_events'] = '{type_legend},type,headline;{lm_settings},lm_usefixedmatch;{lm_redirect},lm_linktype_player,lm_linktype_team;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_matchreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedmatch,lm_se_friendly;{expert_legend:hide},cssID,space';
@@ -259,7 +256,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['lm_tablefields'] = array
 	'exclude'                 => false,
 	'inputType'               => 'checkboxWizard',
 	'eval'                    => array('mandatory'=>true,'multiple'=>true),
-	'options'				  => array('special','place','logo','name','matches','w','d','l','rp','rm','rd','pp','pm','pd','pt','pen'),
+	'options'				  => array('special','place','logo','name','shortname','matches','w','d','l','rp','rm','rd','pp','pm','pd','pt','pen'),
 	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['lm_tablefields']['reference']
 );
 $GLOBALS['TL_DCA']['tl_content']['fields']['lm_usefixedteam'] = array

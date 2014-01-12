@@ -140,6 +140,7 @@ class lm_contestreader_awaytable extends ContentElement
 				$arrTeams[$teams->team]=array(
 				'id'=>$objTeam->id,
 				'teamname'=>$objTeam->name,
+				'shortname'=>$objTeam->shortname,
 				'matches'=>0,
 				'win'=>0,
 				'draw'=>0,
@@ -273,25 +274,25 @@ class lm_contestreader_awaytable extends ContentElement
 
 
 			//Generate table and sort entries
-			$arrTable_A=array();
-			$i=0;
+			$arrTable=array();
+			$k=0;
 			foreach($arrTeams as $team){
-				$i++;
-				$arrTable_A[$i]=$team;
+				$k++;
+				$arrTable[$k]=$team;
 			}
-			for($i=1;$i<count($arrTable_A);$i++){
-				for($j=$i+1;$j<=count($arrTable_A);$j++){
-					if($arrTable_A[$j]['pointstotal']>$arrTable_A[$i]['pointstotal']){
-						swap($arrTable_A,$j,$i);
+			for($k=1;$k<count($arrTable);$k++){
+				for($l=$k+1;$l<=count($arrTable);$l++){
+					if($arrTable[$l]['pointstotal']>$arrTable[$k]['pointstotal']){
+						swap($arrTable,$l,$k);
 					}
-					elseif(($arrTable_A[$i]['pointstotal']==$arrTable_A[$j]['pointstotal'])&&($arrTable_A[$j]['resdiff']>$arrTable_A[$i]['resdiff'])){
-						swap($arrTable_A,$j,$i);
+					elseif(($arrTable[$k]['pointstotal']==$arrTable[$l]['pointstotal'])&&($arrTable[$l]['resdiff']>$arrTable[$k]['resdiff'])){
+						swap($arrTable,$l,$k);
 					}
-					elseif(($arrTable_A[$i]['pointstotal']==$arrTable_A[$j]['pointstotal'])&&($arrTable_A[$i]['resdiff']==$arrTable_A[$j]['resdiff'])&&($arrTable_A[$j]['resplus']>$arrTable_A[$i]['resplus'])){
-						swap($arrTable_A,$j,$i);
+					elseif(($arrTable[$k]['pointstotal']==$arrTable[$l]['pointstotal'])&&($arrTable[$k]['resdiff']==$arrTable[$l]['resdiff'])&&($arrTable[$l]['resplus']>$arrTable[$k]['resplus'])){
+						swap($arrTable,$l,$k);
 					}
-					elseif(($arrTable_A[$i]['pointstotal']==$arrTable_A[$j]['pointstotal'])&&($arrTable_A[$i]['resdiff']==$arrTable_A[$j]['resdiff'])&&($arrTable_A[$i]['resplus']==$arrTable_A[$j]['resplus'])&&($arrTable_A[$j]['name']<$arrTable_A[$i]['name'])){
-						swap($arrTable_A,$j,$i);
+					elseif(($arrTable[$k]['pointstotal']==$arrTable[$l]['pointstotal'])&&($arrTable[$k]['resdiff']==$arrTable[$l]['resdiff'])&&($arrTable[$k]['resplus']==$arrTable[$l]['resplus'])&&($arrTable[$l]['name']<$arrTable[$k]['name'])){
+						swap($arrTable,$l,$k);
 					}
 					else{
 					}
@@ -313,7 +314,7 @@ class lm_contestreader_awaytable extends ContentElement
 			{
 				$this->Template->round_end='';
 			}
-			$this->Template->teams=$arrTable_A;
+			$this->Template->teams=$arrTable;
 			$this->Template->rounds=$arrRounds;
 			$this->Template->round_count=$objAllRounds->numRows;
 			$this->Template->formurl=$this->Environment->url . $this->Environment->path . "/" . $this->Environment->request;
@@ -325,9 +326,9 @@ class lm_contestreader_awaytable extends ContentElement
 	}
 }
 /**
-function swap_A(&$arr_A,$a_A,$b_A){
-	$temp=$arr_A[$a_A];
-	$arr_A[$a_A]=$arr_A[$b_A];
-	$arr_A[$b_A]=$temp;
+function swap(&$arr,$c,$d){
+	$temp=$arr[$c];
+	$arr[$c]=$arr[$d];
+	$arr[$d]=$temp;
 }
 */

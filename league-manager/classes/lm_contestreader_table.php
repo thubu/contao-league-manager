@@ -142,6 +142,7 @@ class lm_contestreader_table extends ContentElement
 				$arrTeams[$teams->team]=array(
 				'id'=>$objTeam->id,
 				'teamname'=>$objTeam->name,
+				'shortname'=>$objTeam->shortname,
 				'matches'=>0,
 				'win'=>0,
 				'draw'=>0,
@@ -332,9 +333,9 @@ class lm_contestreader_table extends ContentElement
 	}
 }
 
-function swap(&$arr,$a,$b){
-	$temp=$arr[$a];
-	$arr[$a]=$arr[$b];
-	$arr[$b]=$temp;
+function swap(&$arr_T,$a_T,$b_T){
+	$temp=$arr_T[$a_T];
+	$arr_T[$a_T]=$arr_T[$b_T];
+	$arr_T[$b_T]=$temp;
 }
 

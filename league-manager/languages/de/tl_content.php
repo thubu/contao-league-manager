@@ -51,7 +51,7 @@
 
  $GLOBALS['TL_LANG']['tl_content']['lm_selectfields'] = 'Felder';
  $GLOBALS['TL_LANG']['tl_content']['lm_tablefields'] = array('Felder','W&auml;hlen Sie die Felder und Reihenfolge, die Sie nutzen m&ouml;chten.');
- $GLOBALS['TL_LANG']['tl_content']['lm_tablefields']['reference'] = array('special'=>'Markierung','place'=>'Platz','logo'=>'Logo','name'=>'Mannschaftsname','matches'=>'Matches','w'=>'Matches gewonnen','l'=>'Matches verloren','d'=>'Matches unentschieden','rp'=>'Ergebnis plus','rm'=>'Ergebnis minus','rd'=>'Ergebnis Differenz','pp'=>'Punkte plus','pm'=>'Punkte minus','pd'=>'Punkte Differenz','pt'=>'Punkte Total','pen'=>'Strafe');
+ $GLOBALS['TL_LANG']['tl_content']['lm_tablefields']['reference'] = array('special'=>'Markierung (nur bei der Gesamttabelle)','place'=>'Platz','logo'=>'Logo','name'=>'Mannschaftsname','shortname'=>'Mannschaftsname Kurzbezeichnung','matches'=>'Matches','w'=>'Matches gewonnen','l'=>'Matches verloren','d'=>'Matches unentschieden','rp'=>'Ergebnis plus','rm'=>'Ergebnis minus','rd'=>'Ergebnis Differenz','pp'=>'Punkte plus','pm'=>'Punkte minus','pd'=>'Punkte Differenz','pt'=>'Punkte Total','pen'=>'Strafe');
 
  $GLOBALS['TL_LANG']['tl_content']['lm_se_friendly'] = array('Suchmaschinenfreundlich','Anklicken, wenn Extraeintr&auml;ge f&uuml;r Suchmaschinen hinzugef&uuml;gt werden sollen');
 

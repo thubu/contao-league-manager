@@ -1,4 +1,4 @@
-<?php if
+<?php
 
 /**
  * PHP version 5

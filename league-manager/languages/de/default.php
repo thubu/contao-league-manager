@@ -44,43 +44,24 @@ $GLOBALS['TL_LANG']['CTE']['lm_clubreader_basic']   = array('Verein - Informatio
  * Miscellaneous
  */
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Place']   = 'Platz';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Logo']   = 'Logo';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Team']   = 'Mannschaft';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Matches']  = 'Matches';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Logo']   = '';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Team']   = 'Team';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Shortname']   = 'T';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Matches']  = 'Sp.';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Win']   = 'S';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Draw']   = 'U';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['Lose']   = 'N';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Resplus']   = 'Ergebnis +';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Resminus']   = 'Ergebnis -';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Resdiff']   = 'Ergebnis diff';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointsplus']   = 'P +';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointsminus']   = 'P -';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointsdiff']   = 'Pkt';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointstotal']   = 'Pkt';
-$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointspenalty']   = 'P Strafe';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Resplus']   = 'T+';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Resminus']   = 'T-';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Resdiff']   = 'TD';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointsplus']   = 'P+';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointsminus']   = 'P-';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointsdiff']   = 'P';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointstotal']   = 'P';
+$GLOBALS['TL_LANG']['league-manager']['resulttable']['Pointspenalty']   = 'P S';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_from']   = 'Zeige Runden von';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_to']   = 'bis';
 $GLOBALS['TL_LANG']['league-manager']['resulttable']['select_round_submit']   = 'Anzeigen';
-
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Place']   = 'Pl.';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Logo']   = ' ';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Team']   = 'Team';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Matches']  = 'Mat.';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Win']   = 'S';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Draw']   = 'U';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Lose']   = 'N';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Resplus']   = 'Erg. +';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Resminus']   = 'Erg. -';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Resdiff']   = 'Erg. diff';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointsplus']   = 'P +';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointsminus']   = 'P -';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointsdiff']   = 'P diff';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointstotal']   = 'P total';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['Pointspenalty']   = 'P Strafe';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['select_round_from']   = 'Zeige Runden von';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['select_round_to']   = 'bis';
-$GLOBALS['TL_LANG']['league-manager']['resulttable_short']['select_round_submit']   = 'Anzeigen';
-
 
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['league']   = 'Wettbewerb :';
 $GLOBALS['TL_LANG']['league-manager']['contestreader_basic']['start']   = 'Erster Spieltag :';

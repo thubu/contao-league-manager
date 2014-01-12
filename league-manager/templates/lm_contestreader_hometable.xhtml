@@ -47,12 +47,15 @@
 						case 'place':
 							?><th class="Place"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Place']); ?></th><?php
 							break;
-										
+					
 						case 'logo':
 							?><th class="Logo"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Logo']); ?></th><?php
 							break;
 						case 'name':
 							?><th class="Team"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Team']); ?></th><?php
+							break;
+						case 'shortname':
+							?><th class="Team"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Shortname']); ?></th><?php
 							break;
 						case 'matches':
 							?><th class="Matches"><?php echo($GLOBALS['TL_LANG']['league-manager']['resulttable']['Matches']); ?></th><?php
@@ -111,14 +114,18 @@
 						case 'name':
 							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['teamname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
 							break;
-						
-						case 'place':
-							?><td class="place"><?php echo $i; ?></td><?php
+						case 'shortname':
+							?><td class="teamname"><?php if($team['redirect']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['shortname']; ?><?php if($team['redirect']!=''): ?></a><?php endif; ?></td><?php
 							break;
 						
 						case 'matches':
 							?><td class="matches"><?php echo $team['matches']; ?></td><?php
 							break;
+						
+						case 'place':
+							?><td class="place"><?php echo $i; ?></td><?php
+							break;
+						
 						case 'w':
 							?><td class="matcheswin"><?php echo $team['win']; ?></td><?php
 							break;
