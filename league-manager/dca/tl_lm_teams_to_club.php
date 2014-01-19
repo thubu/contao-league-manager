@@ -131,14 +131,14 @@ class tl_lm_teams_to_club extends Backend
 {
 	public function listTeams($arrRow)
 	{
-		$objTeam = $this->Database->prepare("SELECT name FROM tl_lm_teams WHERE id=? ORDER BY name ASC")->execute($arrRow['team']);
+		$objTeam = $this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=? ORDER BY name ASC")->execute($arrRow['team']);
 		return $objTeam->name;
 	}
 
 	public function getTeams($dc)
 	{
 		$return = array();
-		$objTeams = $this->Database->prepare("SELECT id, name FROM tl_lm_teams ORDER BY name ASC")->execute();
+		$objTeams = $this->Database->prepare("SELECT * FROM tl_lm_teams ORDER BY name ASC")->execute();
 
 			if ($objTeams->numRows < 1)
 			{

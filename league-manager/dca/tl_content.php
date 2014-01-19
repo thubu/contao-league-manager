@@ -71,7 +71,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_nextmatch_short'] = 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_teamreader_matches'] = '{type_legend},type,headline;{lm_settings},lm_usefixedteam,lm_usefixedcontest,lm_showlogo;{lm_redirect},lm_useredirectmatch;{lm_selecttemplate},lm_template;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_playerreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedplayer,lm_se_friendly;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['lm_resultform'] = '{type_legend},type,headline{lm_settings},lm_usefixedcontest;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_clubreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedclub,lm_showlogo,lm_se_friendly;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['lm_clubreader_basic'] = '{type_legend},type,headline;{lm_settings},lm_usefixedclub,lm_showlogo,lm_se_friendly;{lm_redirect},lm_useredirectteam;{expert_legend:hide},cssID,space';
 
 
 
@@ -483,7 +483,7 @@ class tl_content_lm extends Backend
 	//Lists the teams in the database
 	public function getTeams()
 	{
-		$objTeams = $this->Database->prepare("SELECT id, name, sortstring FROM tl_lm_teams ORDER BY name ASC")->execute();
+		$objTeams = $this->Database->prepare("SELECT id, name, sortstring, gender FROM tl_lm_teams ORDER BY name ASC")->execute();
 
 		if ($objTeams->numRows < 1)
 		{

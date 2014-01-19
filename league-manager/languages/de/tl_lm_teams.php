@@ -15,7 +15,13 @@
  */
 $GLOBALS['TL_LANG']['tl_lm_teams']['name']		= array ('Name', 'Der vollst&auml;ndige Name der Mannschaft');
 $GLOBALS['TL_LANG']['tl_lm_teams']['shortname']	= array ('Kurzname', 'Das K&uuml;rzel der Mannschaft');
-$GLOBALS['TL_LANG']['tl_lm_teams']['sortstring']	= array ('Sortierbegriff', 'Begriff um Mannschaften in Listen zu gruppieren');
+$GLOBALS['TL_LANG']['tl_lm_teams']['sortstring']	= array ('Sortierbegriff', 'Begriff um Mannschaften in Listen zu gruppieren (z.B. Herren - Damen - Junioren)');
+$GLOBALS['TL_LANG']['tl_lm_teams']['gender']	= array ('Klassen', 'Mannschaften in Altersklassen/Gender gruppieren (z.B. Herren - Damen - Junioren)');
+
+
+$GLOBALS['TL_LANG']['tl_lm_teams']['team_dates'] = 'Gr&uuml;ndung / Aufl&ouml;sung';
+$GLOBALS['TL_LANG']['tl_lm_teams']['founded'] = array('Gr&uuml;ndungsdatum', 'Gr&uuml;ndungsdatum der Mannschaft');
+$GLOBALS['TL_LANG']['tl_lm_teams']['terminated'] = array('Aufl&ouml;sungsdatum', 'Aufl&ouml;sungsdatum der Mannschaft');
 
 $GLOBALS['TL_LANG']['tl_lm_teams']['team_location'] = 'Stadion';
 $GLOBALS['TL_LANG']['tl_lm_teams']['location'] = array('Stadion', 'Stadionname der Mannschaft');

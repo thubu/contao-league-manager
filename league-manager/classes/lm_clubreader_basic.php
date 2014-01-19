@@ -64,6 +64,7 @@ class lm_clubreader_basic extends ContentElement
 		if($clubid)
 		{
 			$contests=array();
+
 			$objclub =$this->Database->prepare("SELECT * FROM tl_lm_clubs WHERE id=?")->execute($clubid);
 
 			if (!is_numeric($objclub->logo))
@@ -119,8 +120,52 @@ class lm_clubreader_basic extends ContentElement
 			{
 				$this->Template->club_found=0;
 			}
+
+
+
+
+			$arrRetteam = array();
+			$objTeam = $this->Database->prepare("SELECT * FROM tl_lm_teams_to_club WHERE pid=?")->execute($clubid);
+
+			while($objTeam->next()){
+				$objName = $this->Database->prepare("SELECT * FROM tl_lm_teams WHERE id=?")->execute($objTeam->team);
+
+
+				if ($objName->hasinternal_page==1)
+				{
+					$objTargetPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")
+															->limit(1)
+															->execute($this->lm_redirectteam);
+					$this->redirectteam = $this->generateFrontendUrl($objTargetPage->row(),'/lm_team/' . $objName->id);
+				}
+				else
+				{
+					$this->redirectteam='';
+				}
+
+
+				$arrRetteam[]=array
+				(
+				'id'=>$objTeam->id,
+				'name'=>$objName->name,
+				'shortname'=>$objName->shortname,
+				'internal_page'=>$objName->hasinternal_page,
+				'redirect'=>$this->redirectteam,
+				'gender'=>$objName->gender
+				)
+				;
+				}
+
+			$this->Template->team = $arrRetteam;
 			$this->Template->hasClubid=$clubid;
 			$this->Template->se_friendly=$this->lm_se_friendly;
+
+
+
+
+
+
+
 		}//if($clubid)
 	}
 }

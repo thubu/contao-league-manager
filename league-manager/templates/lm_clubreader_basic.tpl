@@ -90,6 +90,18 @@
 					<span class="value"><a href="<?php echo $this->website; ?>"<?php if($this->se_friendly==1): ?> itemprop="url"<?php endif; ?>target="_blank"><?php echo $this->name; ?></a></span>
 				</div>
 				<?php endif; ?>
+				
+				
+			<?php foreach($this->team as $team): ?>
+				<li class="round <?php echo $team['class']; ?>">
+					<span class="teamname"><?php if($team['internal_page']!=''): ?><a href="<?php echo($team['redirect']); ?>"><?php endif; ?><?php echo $team['name']; ?><?php if(('redirect')!=''): ?></a><?php endif; ?></span>
+					<span class="roundmode"><?php echo $team['shortname']; ?></span>
+					<span class="roundmode">( <?php echo $team['gender']; ?> )</span>
+				</li>
+			<?php endforeach; ?>
+	
+		
+				
 		<?php endif; ?>
 
 

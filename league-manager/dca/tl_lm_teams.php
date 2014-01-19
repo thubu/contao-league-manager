@@ -33,11 +33,12 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 			'flag'                    => 1,
 			'panelLayout'             => 'filter;search,limit',
 			'headerFields'            => array('name'),
+
 		),
 		'label' => array
 		(
-			'fields'                  => array('name','shortname'),
-			'format'                  => '%s (%s)'
+			'fields'                  => array('name','shortname','gender','sortstring'),
+			'format'                  => '%s (%s - %s - %s)'
 		),
 		'global_operations' => array
 		(
@@ -83,7 +84,11 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('hasinternal_page'),
-		'default'                     => 'name,shortname,sortstring;{team_location},location,street,zip,city,country;{team_training},locationtraining,streettraining,ziptraining,citytraining,countrytraining;{add_info},ownteam,website,hasinternal_page,logo'
+		'default'                     => 'name,shortname,sortstring,gender;
+										{team_dates},founded,terminated;
+										{team_location},location,street,zip,city,country;
+										{team_training},locationtraining,streettraining,ziptraining,citytraining,countrytraining;
+										{add_info},ownteam,website,hasinternal_page,logo;'
 	),
 
 	// Subpalettes
@@ -101,14 +106,14 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 			'exclude'                 => false,
 			'filter'				  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
 		),
 		'shortname' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['shortname'],
 			'exclude'                 => false,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'rgxp'=>'alnum', 'unique'=>true)
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>25, 'rgxp'=>'alnum', 'tl_class'=>'w50')
 		),
 		'sortstring' => array
 		(
@@ -116,7 +121,30 @@ $GLOBALS['TL_DCA']['tl_lm_teams'] = array
 			'exclude'                 => false,
 			'filter'				  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'maxlength'=>255)
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+		'gender' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['gender'],
+			'exclude'                 => false,
+			'filter'				  => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50')
+		),
+
+		'founded' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['founded'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'tl_class'=>'w50')
+		),
+		'terminated' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_lm_teams']['terminated'],
+			'exclude'                 => false,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>10, 'tl_class'=>'w50')
 		),
 		'location' => array
 		(
